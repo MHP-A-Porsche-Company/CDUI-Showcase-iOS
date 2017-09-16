@@ -6,9 +6,6 @@ import IGListKit
 
 final class StreamController: UIViewController {
 
-  @IBOutlet private weak var headerView: UIView!
-  @IBOutlet private weak var headerLabel: UILabel!
-  @IBOutlet weak var headerSeparator: UIView!
   @IBOutlet private weak var collectionView: UICollectionView!
 
   private (set) var adapter: ListAdapter!
@@ -31,14 +28,6 @@ final class StreamController: UIViewController {
 
     view.backgroundColor = Theme.Color.background
 
-    headerView.backgroundColor = Theme.Color.background
-    headerSeparator.backgroundColor = Theme.Color.separator
-
-    headerLabel.backgroundColor = Theme.Color.background
-    headerLabel.font = Theme.Font.baseBold
-    headerLabel.textColor = Theme.Color.text
-    headerLabel.textAlignment = .center
-
     collectionView.backgroundColor = Theme.Color.greyLighter
 
     adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
@@ -52,7 +41,6 @@ final class StreamController: UIViewController {
     viewModel.space
       .drive(onNext: { [weak self] space in
         guard let strongSelf = self else { return }
-        strongSelf.headerLabel.text = space.header.title
         strongSelf.blocks.value = space.blocks
       })
       .addDisposableTo(disposeBag)
