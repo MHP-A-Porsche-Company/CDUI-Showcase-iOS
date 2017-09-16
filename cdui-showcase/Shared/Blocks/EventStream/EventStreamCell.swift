@@ -56,6 +56,8 @@ final class EventStreamCell: UICollectionViewCell {
     gradient.horizontalMode = true
     gradient.startColor = UIColor(hex: "#0000F6")
     gradient.endColor = UIColor(hex: "#1F1F80")
+    gradient.startLocation = 0.05
+    gradient.endLocation = 0.8
     contentView.addSubview(gradient)
 
     eventLabel.textColor = Theme.Color.textInvert

@@ -51,7 +51,7 @@ final class UserCell: UICollectionViewCell {
     titleLabel.font = Theme.Font.smallBold
 
     subtitleLabel.textColor = Theme.Color.text
-    subtitleLabel.font = Theme.Font.small
+    subtitleLabel.font = Theme.Font.micro
   }
 
   override func prepareForReuse() {
