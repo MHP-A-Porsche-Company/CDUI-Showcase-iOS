@@ -1,0 +1,3 @@
+github "ReactiveX/RxSwift" ~> 3.5.0
+github "Instagram/IGListKit" ~> 3.0.0
+github "aschuch/AwesomeCache" ~> 5.0.0
