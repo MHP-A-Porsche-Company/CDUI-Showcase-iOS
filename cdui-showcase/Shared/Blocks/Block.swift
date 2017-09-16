@@ -1,6 +1,6 @@
 typealias BlockTarget = (() -> Void)
 
-protocol Block {
+protocol Block: Codable {
   var id: String { get }
 }
 

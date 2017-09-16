@@ -2,9 +2,7 @@ import Foundation
 
 struct UserBlock: Block {
   let id: String
-  let imageUrl: URL?
-  let name: String
-  let subtitle: String
+  let user: User
 }
 
 extension UserBlock: Diffable {
@@ -24,8 +22,6 @@ extension UserBlock: Diffable {
 extension UserBlock: Equatable {
   static func == (lhs: UserBlock, rhs: UserBlock) -> Bool {
     return lhs.id == rhs.id
-      && lhs.imageUrl == rhs.imageUrl
-      && lhs.name == rhs.name
-      && lhs.subtitle == rhs.subtitle
+      && lhs.user == rhs.user
   }
 }

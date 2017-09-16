@@ -5,7 +5,7 @@ final class BlockDecoder {
     let type: BlockType
   }
 
-  static func decodeArray<Key>(container: KeyedDecodingContainer<Key>, key: KeyedDecodingContainer<Key>.Key) throws -> [Block] {
+  static func decodeBlockArray<Key>(container: KeyedDecodingContainer<Key>, key: KeyedDecodingContainer<Key>.Key) throws -> [Block] {
 
     var blockDecoder = try container.nestedUnkeyedContainer(forKey: key)
     let blockMetaInfos = try container.decode([MetaInfo].self, forKey: key)
@@ -15,25 +15,25 @@ final class BlockDecoder {
     for meta in blockMetaInfos {
       switch meta.type {
       case .articleStream:
-        break
+        decodedBlocks.append(try blockDecoder.decode(ArticleStreamBlock.self))
       case .imageStream:
-        break
+        decodedBlocks.append(try blockDecoder.decode(ImageStreamBlock.self))
       case .eventStream:
-        break
+        decodedBlocks.append(try blockDecoder.decode(EventStreamBlock.self))
       case .header:
-        break
+        decodedBlocks.append(try blockDecoder.decode(HeaderBlock.self))
       case .user:
-        break
+        decodedBlocks.append(try blockDecoder.decode(UserBlock.self))
       case .title:
-        break
+        decodedBlocks.append(try blockDecoder.decode(TitleBlock.self))
       case .text:
-        break
+        decodedBlocks.append(try blockDecoder.decode(TextBlock.self))
       case .textHighlight:
-        break
+        decodedBlocks.append(try blockDecoder.decode(TextHighlightBlock.self))
       case .image:
-        break
+        decodedBlocks.append(try blockDecoder.decode(ImageBlock.self))
       case .carousel:
-        break
+        decodedBlocks.append(try blockDecoder.decode(CarouselBlock.self))
       }
     }
 

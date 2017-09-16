@@ -1,12 +1,11 @@
 import Foundation
 
-struct CarouselItem {
+struct CarouselItem: Codable {
   let id: String
   let title: String
   let text: String
   let detailText: String
   let imageUrl: URL?
-  let target: BlockTarget?
 }
 
 extension CarouselItem: Equatable {

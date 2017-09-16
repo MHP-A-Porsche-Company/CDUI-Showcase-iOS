@@ -13,7 +13,7 @@ class TextCell: UICollectionViewCell {
 
   var options = TextCell.defaultOptions {
     didSet {
-      textLabel.font = options.textFont
+      textLabel.font = options.font
       textLabel.textColor = options.textColor
       setNeedsLayout()
     }
@@ -31,7 +31,7 @@ class TextCell: UICollectionViewCell {
     self.backgroundColor = Theme.Color.background
     contentView.backgroundColor = self.backgroundColor
 
-    textLabel.font = options.textFont
+    textLabel.font = options.font
     textLabel.textColor = Theme.Color.text
     textLabel.backgroundColor = Theme.Color.background
     textLabel.numberOfLines = 0
@@ -43,14 +43,14 @@ class TextCell: UICollectionViewCell {
 
     let labelWidth = contentView.frame.width-options.contentInset.right-options.contentInset.left
 
-    let textHeight = text?.heightWithConstrainedWidth(width: labelWidth, font: options.textFont) ?? 0
+    let textHeight = text?.heightWithConstrainedWidth(width: labelWidth, font: options.font) ?? 0
     textLabel.frame = CGRect(x: options.contentInset.left, y: options.contentInset.top, width: labelWidth, height: textHeight)
   }
 
   class func height(forWidth: CGFloat, options: TextCell.Options, text: String?) -> CGFloat {
     let labelWidth = forWidth-options.contentInset.right-options.contentInset.left
 
-    let textHeight = text?.heightWithConstrainedWidth(width: labelWidth, font: options.textFont) ?? 0
+    let textHeight = text?.heightWithConstrainedWidth(width: labelWidth, font: options.font) ?? 0
 
     return options.contentInset.top + textHeight + options.contentInset.bottom
   }
@@ -58,13 +58,13 @@ class TextCell: UICollectionViewCell {
 
 extension TextCell {
   struct Options {
-    let textFont: UIFont
+    let font: UIFont
     let textColor: UIColor
     let contentInset: UIEdgeInsets
   }
 
   static let defaultOptions = TextCell.Options(
-    textFont: Theme.Font.base,
+    font: Theme.Font.base,
     textColor: Theme.Color.text,
     contentInset: UIEdgeInsets(top: Theme.Margin.base, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
   )

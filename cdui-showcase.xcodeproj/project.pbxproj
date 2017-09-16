@@ -36,6 +36,17 @@
 		539E7FBD1F6D5EB50013975E /* EventStreamBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539E7FBC1F6D5EB50013975E /* EventStreamBlock.swift */; };
 		539E7FBF1F6D5EC50013975E /* ArticleStreamBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539E7FBE1F6D5EC50013975E /* ArticleStreamBlock.swift */; };
 		53F7B90F1F6D61B100F32833 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B90E1F6D61B100F32833 /* TextCell.swift */; };
+		53F7B9111F6D62CC00F32833 /* TitleSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9101F6D62CC00F32833 /* TitleSectionController.swift */; };
+		53F7B9131F6D63E600F32833 /* TextSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9121F6D63E600F32833 /* TextSectionController.swift */; };
+		53F7B9151F6D63F100F32833 /* TextHighlightSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9141F6D63F100F32833 /* TextHighlightSectionController.swift */; };
+		53F7B9181F6D64A800F32833 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9171F6D64A800F32833 /* Space.swift */; };
+		53F7B91A1F6D64CF00F32833 /* StreamSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9191F6D64CF00F32833 /* StreamSpace.swift */; };
+		53F7B91C1F6D652100F32833 /* ArticleDetailSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B91B1F6D652100F32833 /* ArticleDetailSpace.swift */; };
+		53F7B9211F6D6B6300F32833 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9201F6D6B6300F32833 /* User.swift */; };
+		53F7B9231F6D6D3300F32833 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9221F6D6D3300F32833 /* GradientView.swift */; };
+		53F7B9261F6D6E9300F32833 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9251F6D6E9300F32833 /* Services.swift */; };
+		53F7B9281F6D6EA000F32833 /* StreamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9271F6D6EA000F32833 /* StreamService.swift */; };
+		53F7B92A1F6D6EAF00F32833 /* StreamServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9291F6D6EAF00F32833 /* StreamServiceDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +84,17 @@
 		539E7FBC1F6D5EB50013975E /* EventStreamBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStreamBlock.swift; sourceTree = "<group>"; };
 		539E7FBE1F6D5EC50013975E /* ArticleStreamBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStreamBlock.swift; sourceTree = "<group>"; };
 		53F7B90E1F6D61B100F32833 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		53F7B9101F6D62CC00F32833 /* TitleSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionController.swift; sourceTree = "<group>"; };
+		53F7B9121F6D63E600F32833 /* TextSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionController.swift; sourceTree = "<group>"; };
+		53F7B9141F6D63F100F32833 /* TextHighlightSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHighlightSectionController.swift; sourceTree = "<group>"; };
+		53F7B9171F6D64A800F32833 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
+		53F7B9191F6D64CF00F32833 /* StreamSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamSpace.swift; sourceTree = "<group>"; };
+		53F7B91B1F6D652100F32833 /* ArticleDetailSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailSpace.swift; sourceTree = "<group>"; };
+		53F7B9201F6D6B6300F32833 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		53F7B9221F6D6D3300F32833 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		53F7B9251F6D6E9300F32833 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		53F7B9271F6D6EA000F32833 /* StreamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamService.swift; sourceTree = "<group>"; };
+		53F7B9291F6D6EAF00F32833 /* StreamServiceDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamServiceDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +177,9 @@
 		539E7F891F6D523D0013975E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				53F7B9241F6D6E8400F32833 /* Services */,
+				53F7B91F1F6D6B5700F32833 /* Models */,
+				53F7B9161F6D648700F32833 /* Spaces */,
 				539E7F961F6D5B370013975E /* Blocks */,
 				539E7F8D1F6D570B0013975E /* Utils */,
 				539E7F8B1F6D526D0013975E /* Theme.swift */,
@@ -179,6 +204,7 @@
 				539E7F901F6D575F0013975E /* String+Extensions.swift */,
 				539E7F921F6D57820013975E /* UIColor+Extensions.swift */,
 				539E7FAC1F6D5DA40013975E /* Diffable.swift */,
+				53F7B9221F6D6D3300F32833 /* GradientView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -261,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				539E7FB41F6D5E560013975E /* TitleBlock.swift */,
+				53F7B9101F6D62CC00F32833 /* TitleSectionController.swift */,
 			);
 			path = Title;
 			sourceTree = "<group>";
@@ -269,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				539E7FB21F6D5E4E0013975E /* TextBlock.swift */,
+				53F7B9121F6D63E600F32833 /* TextSectionController.swift */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -277,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				539E7FB01F6D5E450013975E /* TextHighlightBlock.swift */,
+				53F7B9141F6D63F100F32833 /* TextHighlightSectionController.swift */,
 			);
 			path = TextHighlight;
 			sourceTree = "<group>";
@@ -296,6 +325,34 @@
 				539E7FAA1F6D5D820013975E /* CarouselItem.swift */,
 			);
 			path = Carousel;
+			sourceTree = "<group>";
+		};
+		53F7B9161F6D648700F32833 /* Spaces */ = {
+			isa = PBXGroup;
+			children = (
+				53F7B9171F6D64A800F32833 /* Space.swift */,
+				53F7B9191F6D64CF00F32833 /* StreamSpace.swift */,
+				53F7B91B1F6D652100F32833 /* ArticleDetailSpace.swift */,
+			);
+			path = Spaces;
+			sourceTree = "<group>";
+		};
+		53F7B91F1F6D6B5700F32833 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53F7B9201F6D6B6300F32833 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		53F7B9241F6D6E8400F32833 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				53F7B9251F6D6E9300F32833 /* Services.swift */,
+				53F7B9271F6D6EA000F32833 /* StreamService.swift */,
+				53F7B9291F6D6EAF00F32833 /* StreamServiceDefault.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,23 +464,34 @@
 			files = (
 				539E7F9C1F6D5C540013975E /* BlockDecoder.swift in Sources */,
 				539E7FBF1F6D5EC50013975E /* ArticleStreamBlock.swift in Sources */,
+				53F7B9231F6D6D3300F32833 /* GradientView.swift in Sources */,
 				539E7FAB1F6D5D820013975E /* CarouselItem.swift in Sources */,
 				539E7FB31F6D5E4E0013975E /* TextBlock.swift in Sources */,
 				539E7FA91F6D5D5E0013975E /* CarouselBlock.swift in Sources */,
 				539E7FAF1F6D5DF00013975E /* ImageBlock.swift in Sources */,
 				539E7F911F6D575F0013975E /* String+Extensions.swift in Sources */,
 				539E7FBD1F6D5EB50013975E /* EventStreamBlock.swift in Sources */,
+				53F7B9211F6D6B6300F32833 /* User.swift in Sources */,
 				539E7FB91F6D5E970013975E /* HeaderBlock.swift in Sources */,
+				53F7B9281F6D6EA000F32833 /* StreamService.swift in Sources */,
 				539E7F981F6D5B590013975E /* Block.swift in Sources */,
+				53F7B91C1F6D652100F32833 /* ArticleDetailSpace.swift in Sources */,
 				53F7B90F1F6D61B100F32833 /* TextCell.swift in Sources */,
 				539E7F931F6D57820013975E /* UIColor+Extensions.swift in Sources */,
+				53F7B9261F6D6E9300F32833 /* Services.swift in Sources */,
 				539E7FB51F6D5E560013975E /* TitleBlock.swift in Sources */,
 				539E7FB71F6D5E600013975E /* UserBlock.swift in Sources */,
+				53F7B9181F6D64A800F32833 /* Space.swift in Sources */,
 				539E7F8C1F6D526D0013975E /* Theme.swift in Sources */,
 				539E7F8F1F6D573D0013975E /* Date+Extensions.swift in Sources */,
 				532F51A21F6D4C87006FF4F4 /* ViewController.swift in Sources */,
+				53F7B9151F6D63F100F32833 /* TextHighlightSectionController.swift in Sources */,
 				532F51A01F6D4C87006FF4F4 /* AppDelegate.swift in Sources */,
+				53F7B9111F6D62CC00F32833 /* TitleSectionController.swift in Sources */,
 				539E7FBB1F6D5EA90013975E /* ImageStreamBlock.swift in Sources */,
+				53F7B9131F6D63E600F32833 /* TextSectionController.swift in Sources */,
+				53F7B91A1F6D64CF00F32833 /* StreamSpace.swift in Sources */,
+				53F7B92A1F6D6EAF00F32833 /* StreamServiceDefault.swift in Sources */,
 				539E7FB11F6D5E450013975E /* TextHighlightBlock.swift in Sources */,
 				539E7F9A1F6D5B7F0013975E /* BlockType.swift in Sources */,
 				539E7FAD1F6D5DA40013975E /* Diffable.swift in Sources */,
