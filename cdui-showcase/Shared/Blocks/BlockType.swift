@@ -1,13 +1,13 @@
 enum BlockType: String, Codable {
-  case articleStream = "ArticleStream"
-  case imageStream = "ImageStream"
-  case eventStream = "EventStream"
+  case articleStream
+  case imageStream
+  case eventStream
 
-  case header = "header"
-  case user = "user"
-  case title = "title"
-  case text = "text"
-  case textHighlight = "textHighlight"
-  case image = "image"
-  case carousel = "carousel"
+  case header
+  case user
+  case title
+  case text
+  case textHighlight
+  case image
+  case carousel
 }
