@@ -52,7 +52,7 @@ final class ArticleStreamSectionController: ListSectionController {
       let height = TextCell.height(forWidth: width, options: ArticleStreamSectionController.subtitleOptions, text: block.subtitle)
       return CGSize(width: width, height: height)
     } else {
-      let height = TextCell.height(forWidth: width, options: ArticleStreamSectionController.createdOptions, text: "2h ago")
+      let height = TextCell.height(forWidth: width, options: ArticleStreamSectionController.createdOptions, text: DateFormatter.timeAgoString(from: block.created))
       return CGSize(width: width, height: height)
     }
   }
@@ -91,7 +91,7 @@ final class ArticleStreamSectionController: ListSectionController {
       let cell = collectionContext!.dequeueReusableCell(of: TextCell.self, for: self, at: index) as! TextCell
 
       cell.options = ArticleStreamSectionController.createdOptions
-      cell.text = "2h ago"
+      cell.text = DateFormatter.timeAgoString(from: block.created)
 
       return cell
     }

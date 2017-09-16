@@ -52,6 +52,7 @@
 		53E02C691F6D9A930006911F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C681F6D9A930006911F /* Error.swift */; };
 		53E02C6B1F6D9AFD0006911F /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C6A1F6D9AFD0006911F /* RemoteImageView.swift */; };
 		53E02C6D1F6D9B220006911F /* RemoteImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C6C1F6D9B220006911F /* RemoteImageViewModel.swift */; };
+		53EA1FF41F6DADAC00005336 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA1FF31F6DADAC00005336 /* DateFormatter+Extensions.swift */; };
 		53F7B90F1F6D61B100F32833 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B90E1F6D61B100F32833 /* TextCell.swift */; };
 		53F7B9111F6D62CC00F32833 /* TitleSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9101F6D62CC00F32833 /* TitleSectionController.swift */; };
 		53F7B9131F6D63E600F32833 /* TextSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9121F6D63E600F32833 /* TextSectionController.swift */; };
@@ -122,6 +123,7 @@
 		53E02C681F6D9A930006911F /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		53E02C6A1F6D9AFD0006911F /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 		53E02C6C1F6D9B220006911F /* RemoteImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageViewModel.swift; sourceTree = "<group>"; };
+		53EA1FF31F6DADAC00005336 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		53F7B90E1F6D61B100F32833 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		53F7B9101F6D62CC00F32833 /* TitleSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionController.swift; sourceTree = "<group>"; };
 		53F7B9121F6D63E600F32833 /* TextSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				539E7F8E1F6D573D0013975E /* Date+Extensions.swift */,
+				53EA1FF31F6DADAC00005336 /* DateFormatter+Extensions.swift */,
 				539E7F901F6D575F0013975E /* String+Extensions.swift */,
 				539E7F921F6D57820013975E /* UIColor+Extensions.swift */,
 				539E7FAC1F6D5DA40013975E /* Diffable.swift */,
@@ -584,6 +587,7 @@
 				53F7B93B1F6D81D600F32833 /* ArticleDetailViewModel.swift in Sources */,
 				539E7FB71F6D5E600013975E /* UserBlock.swift in Sources */,
 				53F7B9181F6D64A800F32833 /* Space.swift in Sources */,
+				53EA1FF41F6DADAC00005336 /* DateFormatter+Extensions.swift in Sources */,
 				539E7F8C1F6D526D0013975E /* Theme.swift in Sources */,
 				539E7F8F1F6D573D0013975E /* Date+Extensions.swift in Sources */,
 				53DDA6071F6DAA2900A2D9A8 /* HairlineConstraint.swift in Sources */,
