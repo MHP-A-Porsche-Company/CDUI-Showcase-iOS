@@ -3,7 +3,7 @@ import Foundation
 struct ImageStreamBlock: Block {
   let id: String
   let user: User
-  let imageUrl: URL?
+  let imageUrl: String?
   let created: Date
 }
 

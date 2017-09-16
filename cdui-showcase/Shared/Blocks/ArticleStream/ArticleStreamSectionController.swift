@@ -14,13 +14,13 @@ final class ArticleStreamSectionController: ListSectionController {
   private static let subtitleOptions = TextCell.Options(
     font: Theme.Font.large,
     textColor: Theme.Color.text,
-    contentInset: UIEdgeInsets(top: 0, left: Theme.Margin.base, bottom: Theme.Margin.small, right: Theme.Margin.base)
+    contentInset: UIEdgeInsets(top: 0, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
   )
 
   private static let createdOptions = TextCell.Options(
     font: Theme.Font.micro,
     textColor: Theme.Color.textLight,
-    contentInset: UIEdgeInsets(top: 0, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
+    contentInset: UIEdgeInsets(top: 0, left: Theme.Margin.base, bottom: Theme.Margin.small, right: Theme.Margin.base)
   )
 
   private static let imageOptions = ImageCell.Options(

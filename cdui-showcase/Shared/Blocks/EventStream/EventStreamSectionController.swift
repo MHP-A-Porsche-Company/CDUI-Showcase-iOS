@@ -23,15 +23,16 @@ final class EventStreamSectionController: ListSectionController {
 
   override func sizeForItem(at index: Int) -> CGSize {
     let width = collectionContext?.containerSize.width ?? 0
-    let height = TextCell.height(forWidth: width, options: EventStreamSectionController.textCellOptions, text: block.title)
+    let height = EventStreamCell.height(forWidth: width, title: block.title, subtitle: block.subtitle)
     return CGSize(width: width, height: height)
   }
 
   override func cellForItem(at index: Int) -> UICollectionViewCell {
-    let cell = collectionContext!.dequeueReusableCell(of: TextCell.self, for: self, at: index) as! TextCell
+    let cell = collectionContext!.dequeueReusableCell(of: EventStreamCell.self, for: self, at: index) as! EventStreamCell
 
-    cell.options = EventStreamSectionController.textCellOptions
-    cell.text = block.title
+    cell.date = DateFormatter.string(from: block.date, dateStyle: .medium).uppercased()
+    cell.title = block.title
+    cell.subtitle = block.subtitle
 
     return cell
 

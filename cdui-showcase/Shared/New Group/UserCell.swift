@@ -5,7 +5,7 @@ final class UserCell: UICollectionViewCell {
   static let nibName = "UserCell"
   static let reuseIdentifier = "UserCell"
 
-  static let preferredHeight: CGFloat = 86
+  static let preferredHeight: CGFloat = 80
 
   var title: String? {
     didSet {

@@ -53,6 +53,7 @@
 		53E02C6B1F6D9AFD0006911F /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C6A1F6D9AFD0006911F /* RemoteImageView.swift */; };
 		53E02C6D1F6D9B220006911F /* RemoteImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C6C1F6D9B220006911F /* RemoteImageViewModel.swift */; };
 		53EA1FF41F6DADAC00005336 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA1FF31F6DADAC00005336 /* DateFormatter+Extensions.swift */; };
+		53EA1FF61F6DC9ED00005336 /* EventStreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53EA1FF51F6DC9ED00005336 /* EventStreamCell.swift */; };
 		53F7B90F1F6D61B100F32833 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B90E1F6D61B100F32833 /* TextCell.swift */; };
 		53F7B9111F6D62CC00F32833 /* TitleSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9101F6D62CC00F32833 /* TitleSectionController.swift */; };
 		53F7B9131F6D63E600F32833 /* TextSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9121F6D63E600F32833 /* TextSectionController.swift */; };
@@ -124,6 +125,7 @@
 		53E02C6A1F6D9AFD0006911F /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 		53E02C6C1F6D9B220006911F /* RemoteImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageViewModel.swift; sourceTree = "<group>"; };
 		53EA1FF31F6DADAC00005336 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		53EA1FF51F6DC9ED00005336 /* EventStreamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStreamCell.swift; sourceTree = "<group>"; };
 		53F7B90E1F6D61B100F32833 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		53F7B9101F6D62CC00F32833 /* TitleSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionController.swift; sourceTree = "<group>"; };
 		53F7B9121F6D63E600F32833 /* TextSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionController.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			children = (
 				539E7FBC1F6D5EB50013975E /* EventStreamBlock.swift */,
 				53AD0DFD1F6D8DB9006FB94F /* EventStreamSectionController.swift */,
+				53EA1FF51F6DC9ED00005336 /* EventStreamCell.swift */,
 			);
 			path = EventStream;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				53F7B9231F6D6D3300F32833 /* GradientView.swift in Sources */,
 				53F7B9331F6D79C800F32833 /* ArticleDetailService.swift in Sources */,
 				539E7FAB1F6D5D820013975E /* CarouselItem.swift in Sources */,
+				53EA1FF61F6DC9ED00005336 /* EventStreamCell.swift in Sources */,
 				53E02C6D1F6D9B220006911F /* RemoteImageViewModel.swift in Sources */,
 				53AD0DFC1F6D8BA6006FB94F /* ArticleStreamSectionController.swift in Sources */,
 				53AD0E031F6D90B9006FB94F /* UserCell.swift in Sources */,
