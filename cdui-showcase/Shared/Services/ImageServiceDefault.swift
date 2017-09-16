@@ -37,7 +37,7 @@ struct ImageServiceDefault: ImageService {
         return Disposables.create()
       }
 
-      let urlSession = URLSession()
+      let urlSession = URLSession(configuration: URLSessionConfiguration.default)
       let urlRequest = URLRequest(url: convertedUrl)
 
       let task = urlSession.downloadTask(with: urlRequest, completionHandler: { (url, _, error) in

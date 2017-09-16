@@ -22,6 +22,7 @@ final class RemoteImageViewModel {
 
     loading.value = true
     imageService.get(imageUrl: imageUrl)
+      .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
       .subscribe(
         onNext: { [weak self] image in
           self?.loadedImage.value = image

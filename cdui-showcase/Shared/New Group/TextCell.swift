@@ -41,10 +41,11 @@ class TextCell: UICollectionViewCell {
   override func layoutSubviews() {
     super.layoutSubviews()
 
-    let labelWidth = contentView.frame.width-options.contentInset.right-options.contentInset.left
+    let labelWidth = max(contentView.frame.width-options.contentInset.right-options.contentInset.left, 0)
 
-    let textHeight = text?.heightWithConstrainedWidth(width: labelWidth, font: options.font) ?? 0
-    textLabel.frame = CGRect(x: options.contentInset.left, y: options.contentInset.top, width: labelWidth, height: textHeight)
+    let labelHeight = max(contentView.frame.height-options.contentInset.top-options.contentInset.bottom, 0)
+
+    textLabel.frame = CGRect(x: options.contentInset.left, y: options.contentInset.top, width: labelWidth, height: labelHeight)
   }
 
   class func height(forWidth: CGFloat, options: TextCell.Options, text: String?) -> CGFloat {

@@ -23,6 +23,10 @@ final class ArticleStreamSectionController: ListSectionController {
     contentInset: UIEdgeInsets(top: 0, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
   )
 
+  private static let imageOptions = ImageCell.Options(
+    contentInset: UIEdgeInsets(top: 0, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
+  )
+
   override init() {
     super.init()
 
@@ -30,7 +34,7 @@ final class ArticleStreamSectionController: ListSectionController {
   }
 
   override func numberOfItems() -> Int {
-    return 4
+    return 5
   }
 
   override func sizeForItem(at index: Int) -> CGSize {
@@ -39,9 +43,12 @@ final class ArticleStreamSectionController: ListSectionController {
     if index == 0 {
       return CGSize(width: width, height: UserCell.preferredHeight)
     } else if index == 1 {
-      let height = TextCell.height(forWidth: width, options: ArticleStreamSectionController.titleOptions, text: block.title)
+      let height = (block.imageUrl != nil && block.imageUrl!.characters.count > 0) ? ImageCell.height(forWidth: width, options: ArticleStreamSectionController.imageOptions) : 0
       return CGSize(width: width, height: height)
     } else if index == 2 {
+      let height = TextCell.height(forWidth: width, options: ArticleStreamSectionController.titleOptions, text: block.title)
+      return CGSize(width: width, height: height)
+    } else if index == 3 {
       let height = TextCell.height(forWidth: width, options: ArticleStreamSectionController.subtitleOptions, text: block.subtitle)
       return CGSize(width: width, height: height)
     } else {
@@ -60,13 +67,20 @@ final class ArticleStreamSectionController: ListSectionController {
 
       return cell
     } else if index == 1 {
+      let cell = collectionContext!.dequeueReusableCell(of: ImageCell.self, for: self, at: index) as! ImageCell
+
+      cell.options = ArticleStreamSectionController.imageOptions
+      cell.imageUrl = block.imageUrl
+
+      return cell
+    } else if index == 2 {
       let cell = collectionContext!.dequeueReusableCell(of: TextCell.self, for: self, at: index) as! TextCell
 
       cell.options = ArticleStreamSectionController.titleOptions
       cell.text = block.title
 
       return cell
-    } else if index == 2 {
+    } else if index == 3 {
       let cell = collectionContext!.dequeueReusableCell(of: TextCell.self, for: self, at: index) as! TextCell
 
       cell.options = ArticleStreamSectionController.subtitleOptions

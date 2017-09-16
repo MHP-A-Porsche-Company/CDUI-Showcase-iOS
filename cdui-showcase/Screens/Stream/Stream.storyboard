@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,9 +27,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kx-UX-Dg6">
+                                        <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                                        <color key="backgroundColor" red="0.76167827072538863" green="0.76167827072538863" blue="0.76167827072538863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="UD6-h2-QTS" customClass="HairlineConstraint" customModule="cdui_showcase" customModuleProvider="target"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1kx-UX-Dg6" secondAttribute="trailing" id="1g7-x6-gZt"/>
+                                    <constraint firstItem="1kx-UX-Dg6" firstAttribute="leading" secondItem="Ah9-rg-KNf" secondAttribute="leading" id="3ni-ml-PnB"/>
+                                    <constraint firstAttribute="bottom" secondItem="1kx-UX-Dg6" secondAttribute="bottom" id="9eL-kU-ktI"/>
                                     <constraint firstItem="OvY-L2-iFM" firstAttribute="centerY" secondItem="Ah9-rg-KNf" secondAttribute="centerY" id="ahB-8q-PnP"/>
                                     <constraint firstItem="OvY-L2-iFM" firstAttribute="centerX" secondItem="Ah9-rg-KNf" secondAttribute="centerX" id="drH-p2-PwD"/>
                                     <constraint firstAttribute="height" constant="44" id="xn8-0e-ElQ"/>
@@ -61,6 +72,7 @@
                     <connections>
                         <outlet property="collectionView" destination="aCd-ls-1mF" id="Etf-Fv-fID"/>
                         <outlet property="headerLabel" destination="OvY-L2-iFM" id="sW4-KM-aDU"/>
+                        <outlet property="headerSeparator" destination="1kx-UX-Dg6" id="ZOo-Bv-emx"/>
                         <outlet property="headerView" destination="Ah9-rg-KNf" id="bY7-d1-t1a"/>
                     </connections>
                 </viewController>

@@ -45,6 +45,8 @@
 		53AD0E001F6D8DC5006FB94F /* ImageStreamSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AD0DFF1F6D8DC5006FB94F /* ImageStreamSectionController.swift */; };
 		53AD0E031F6D90B9006FB94F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AD0E021F6D90B9006FB94F /* UserCell.swift */; };
 		53AD0E051F6D90C5006FB94F /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53AD0E041F6D90C5006FB94F /* UserCell.xib */; };
+		53DDA6051F6D9F5900A2D9A8 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDA6041F6D9F5900A2D9A8 /* ImageCell.swift */; };
+		53DDA6071F6DAA2900A2D9A8 /* HairlineConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDA6061F6DAA2900A2D9A8 /* HairlineConstraint.swift */; };
 		53E02C651F6D99F40006911F /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C641F6D99F40006911F /* ImageService.swift */; };
 		53E02C671F6D9A1A0006911F /* ImageServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C661F6D9A1A0006911F /* ImageServiceDefault.swift */; };
 		53E02C691F6D9A930006911F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C681F6D9A930006911F /* Error.swift */; };
@@ -113,6 +115,8 @@
 		53AD0DFF1F6D8DC5006FB94F /* ImageStreamSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamSectionController.swift; sourceTree = "<group>"; };
 		53AD0E021F6D90B9006FB94F /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		53AD0E041F6D90C5006FB94F /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		53DDA6041F6D9F5900A2D9A8 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		53DDA6061F6DAA2900A2D9A8 /* HairlineConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairlineConstraint.swift; sourceTree = "<group>"; };
 		53E02C641F6D99F40006911F /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		53E02C661F6D9A1A0006911F /* ImageServiceDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceDefault.swift; sourceTree = "<group>"; };
 		53E02C681F6D9A930006911F /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -382,10 +386,12 @@
 			children = (
 				53F7B9221F6D6D3300F32833 /* GradientView.swift */,
 				53F7B90E1F6D61B100F32833 /* TextCell.swift */,
+				53DDA6041F6D9F5900A2D9A8 /* ImageCell.swift */,
 				53AD0E021F6D90B9006FB94F /* UserCell.swift */,
 				53AD0E041F6D90C5006FB94F /* UserCell.xib */,
 				53E02C6A1F6D9AFD0006911F /* RemoteImageView.swift */,
 				53E02C6C1F6D9B220006911F /* RemoteImageViewModel.swift */,
+				53DDA6061F6DAA2900A2D9A8 /* HairlineConstraint.swift */,
 			);
 			name = Views;
 			path = "New Group";
@@ -571,6 +577,7 @@
 				539E7F981F6D5B590013975E /* Block.swift in Sources */,
 				53F7B91C1F6D652100F32833 /* ArticleDetailSpace.swift in Sources */,
 				53F7B90F1F6D61B100F32833 /* TextCell.swift in Sources */,
+				53DDA6051F6D9F5900A2D9A8 /* ImageCell.swift in Sources */,
 				539E7F931F6D57820013975E /* UIColor+Extensions.swift in Sources */,
 				53F7B9261F6D6E9300F32833 /* Services.swift in Sources */,
 				539E7FB51F6D5E560013975E /* TitleBlock.swift in Sources */,
@@ -579,6 +586,7 @@
 				53F7B9181F6D64A800F32833 /* Space.swift in Sources */,
 				539E7F8C1F6D526D0013975E /* Theme.swift in Sources */,
 				539E7F8F1F6D573D0013975E /* Date+Extensions.swift in Sources */,
+				53DDA6071F6DAA2900A2D9A8 /* HairlineConstraint.swift in Sources */,
 				53F7B9151F6D63F100F32833 /* TextHighlightSectionController.swift in Sources */,
 				532F51A01F6D4C87006FF4F4 /* AppDelegate.swift in Sources */,
 				53E02C651F6D99F40006911F /* ImageService.swift in Sources */,
@@ -733,11 +741,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "cdui-showcase/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mhp.cdui-showcase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -752,11 +761,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "cdui-showcase/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mhp.cdui-showcase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

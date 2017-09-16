@@ -56,7 +56,7 @@ class RemoteImageView: UIView {
 
     imageView.contentMode = .scaleAspectFill
     imageView.clipsToBounds = true
-    imageView.backgroundColor = Theme.Color.selectedBackground
+    imageView.backgroundColor = Theme.Color.imageBackground
     addSubview(imageView)
   }
 

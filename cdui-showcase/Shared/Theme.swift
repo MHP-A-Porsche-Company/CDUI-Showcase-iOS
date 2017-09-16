@@ -60,8 +60,9 @@ struct Theme {
 
     static var greyDarker: UIColor { return UIColor(hex: "#535353") }
     static var greyDark: UIColor { return UIColor(hex: "#9E9E9E") }
-    static var grey: UIColor { return UIColor(hex: "#EAEAEA") }
-    static var greyLight: UIColor { return UIColor(hex: "#F8F8F8") }
+    static var grey: UIColor { return UIColor(hex: "#C7C7C7") }
+    static var greyLight: UIColor { return UIColor(hex: "#EAEAEA") }
+    static var greyLighter: UIColor { return UIColor(hex: "#F8F8F8") }
 
     static var white: UIColor { return UIColor(hex: "#FFFFFF") }
 
@@ -73,8 +74,9 @@ struct Theme {
     static var textInvert: UIColor { return Theme.Color.white }
 
     static var background: UIColor { return Theme.Color.white }
-    static var selectedBackground: UIColor { return Theme.Color.greyLight }
-    static var imageBackground: UIColor { return Theme.Color.grey }
+    static var selectedBackground: UIColor { return Theme.Color.greyLighter }
+    static var imageBackground: UIColor { return Theme.Color.greyLight }
+    static var separator: UIColor { return Theme.Color.grey }
   }
 
   static func setAppearance() {

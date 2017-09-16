@@ -8,6 +8,7 @@ final class StreamController: UIViewController {
 
   @IBOutlet private weak var headerView: UIView!
   @IBOutlet private weak var headerLabel: UILabel!
+  @IBOutlet weak var headerSeparator: UIView!
   @IBOutlet private weak var collectionView: UICollectionView!
 
   private (set) var adapter: ListAdapter!
@@ -25,22 +26,20 @@ final class StreamController: UIViewController {
     return viewController
   }
 
-  override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
-  }
-
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    view.backgroundColor = Theme.Color.blue
+    view.backgroundColor = Theme.Color.background
 
-    headerView.backgroundColor = Theme.Color.blue
-    headerLabel.backgroundColor = Theme.Color.blue
+    headerView.backgroundColor = Theme.Color.background
+    headerSeparator.backgroundColor = Theme.Color.separator
+
+    headerLabel.backgroundColor = Theme.Color.background
     headerLabel.font = Theme.Font.baseBold
-    headerLabel.textColor = Theme.Color.textInvert
+    headerLabel.textColor = Theme.Color.text
     headerLabel.textAlignment = .center
 
-    collectionView.backgroundColor = Theme.Color.greyLight
+    collectionView.backgroundColor = Theme.Color.greyLighter
 
     adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
     adapter.collectionView = collectionView
