@@ -20,7 +20,7 @@ struct Theme {
     }
 
     static var baseBold: UIFont {
-      return Theme.FontFace.bold(size: 17)
+      return Theme.FontFace.semibold(size: 17)
     }
 
     static var base: UIFont {

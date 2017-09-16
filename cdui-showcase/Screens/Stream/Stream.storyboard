@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="height" constant="44" id="xn8-0e-ElQ"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aCd-ls-1mF">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aCd-ls-1mF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NUo-TB-xSm">
@@ -52,7 +52,7 @@
                             <constraint firstItem="7Jb-YS-cAr" firstAttribute="trailing" secondItem="aCd-ls-1mF" secondAttribute="trailing" id="HCV-Tt-OOO"/>
                             <constraint firstItem="7Jb-YS-cAr" firstAttribute="trailing" secondItem="Ah9-rg-KNf" secondAttribute="trailing" id="KGx-yl-nvd"/>
                             <constraint firstItem="aCd-ls-1mF" firstAttribute="leading" secondItem="7Jb-YS-cAr" secondAttribute="leading" id="NPa-A3-inM"/>
-                            <constraint firstItem="7Jb-YS-cAr" firstAttribute="bottom" secondItem="aCd-ls-1mF" secondAttribute="bottom" id="psR-Do-JFg"/>
+                            <constraint firstAttribute="bottom" secondItem="aCd-ls-1mF" secondAttribute="bottom" id="psR-Do-JFg"/>
                             <constraint firstItem="Ah9-rg-KNf" firstAttribute="leading" secondItem="7Jb-YS-cAr" secondAttribute="leading" id="tSc-ZH-Mf5"/>
                             <constraint firstItem="aCd-ls-1mF" firstAttribute="top" secondItem="Ah9-rg-KNf" secondAttribute="bottom" id="wMp-Yf-RjO"/>
                         </constraints>

@@ -40,7 +40,7 @@ final class StreamController: UIViewController {
     headerLabel.textColor = Theme.Color.textInvert
     headerLabel.textAlignment = .center
 
-    collectionView.backgroundColor = Theme.Color.background
+    collectionView.backgroundColor = Theme.Color.greyLight
 
     adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
     adapter.collectionView = collectionView
@@ -72,45 +72,7 @@ extension StreamController: ListAdapterDataSource {
   }
 
   func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-    // TODO: Make this into a factory
-    switch object {
-//    case _ as ListDiffableBox<TitleBlock>:
-//      let section = TitleSectionController()
-//      return section
-//    case _ as ListDiffableBox<LargeTitleBlock>:
-//      let section = LargeTitleSectionController()
-//      return section
-//    case _ as ListDiffableBox<TextBlock>:
-//      let section = TextSectionController()
-//      return section
-//    case _ as ListDiffableBox<WhitespaceBlock>:
-//      let section = WhitespaceSectionController()
-//      return section
-//    case _ as ListDiffableBox<SeparatorBlock>:
-//      let section = SeparatorSectionController()
-//      return section
-//    case _ as ListDiffableBox<ArticleSectionDiffable>:
-//      let section = ArticleSectionController(imageService: blockViewModel.imageService)
-//      return section
-//    case _ as ListDiffableBox<CarouselBlock>:
-//      let section = CarouselSectionController(imageService: blockViewModel.imageService)
-//      return section
-//    case _ as ListDiffableBox<HeroBlock>:
-//      let section = HeroSectionController(imageService: blockViewModel.imageService)
-//      return section
-//    case _ as ListDiffableBox<ListElementBlock>:
-//      let section = ListElementSectionController()
-//      return section
-//    case _ as ListDiffableBox<ImageListElementBlock>:
-//      let section = ImageListElementSectionController(imageService: blockViewModel.imageService)
-//      return section
-//    case _ as ListDiffableBox<ListPreviewBlock>:
-//      let section = ListPreviewSectionController(imageService: blockViewModel.imageService)
-//      return section
-    default:
-      print("Encountered block with unexpected type \(object) in \(type(of: self)).")
-      return EmptySectionController()
-    }
+    return BlockSectionControllerFactory.sectionController(for: object)
   }
 
   func emptyView(for listAdapter: ListAdapter) -> UIView? { return nil }
