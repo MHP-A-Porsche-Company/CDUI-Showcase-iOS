@@ -33,6 +33,12 @@
 		539E7FBB1F6D5EA90013975E /* ImageStreamBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539E7FBA1F6D5EA90013975E /* ImageStreamBlock.swift */; };
 		539E7FBD1F6D5EB50013975E /* EventStreamBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539E7FBC1F6D5EB50013975E /* EventStreamBlock.swift */; };
 		539E7FBF1F6D5EC50013975E /* ArticleStreamBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539E7FBE1F6D5EC50013975E /* ArticleStreamBlock.swift */; };
+		53AD0DF11F6D835F006FB94F /* StreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AD0DF01F6D835F006FB94F /* StreamController.swift */; };
+		53AD0DF31F6D83D0006FB94F /* Stream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53AD0DF21F6D83D0006FB94F /* Stream.storyboard */; };
+		53AD0DF51F6D8837006FB94F /* EmptySectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AD0DF41F6D8837006FB94F /* EmptySectionController.swift */; };
+		53AD0DF61F6D8943006FB94F /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 539E7F861F6D512E0013975E /* Montserrat-Bold.ttf */; };
+		53AD0DF71F6D8943006FB94F /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 539E7F881F6D51DE0013975E /* Montserrat-SemiBold.ttf */; };
+		53AD0DF81F6D8943006FB94F /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 539E7F871F6D512E0013975E /* Montserrat-Regular.ttf */; };
 		53F7B90F1F6D61B100F32833 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B90E1F6D61B100F32833 /* TextCell.swift */; };
 		53F7B9111F6D62CC00F32833 /* TitleSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9101F6D62CC00F32833 /* TitleSectionController.swift */; };
 		53F7B9131F6D63E600F32833 /* TextSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9121F6D63E600F32833 /* TextSectionController.swift */; };
@@ -87,6 +93,9 @@
 		539E7FBA1F6D5EA90013975E /* ImageStreamBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamBlock.swift; sourceTree = "<group>"; };
 		539E7FBC1F6D5EB50013975E /* EventStreamBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStreamBlock.swift; sourceTree = "<group>"; };
 		539E7FBE1F6D5EC50013975E /* ArticleStreamBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStreamBlock.swift; sourceTree = "<group>"; };
+		53AD0DF01F6D835F006FB94F /* StreamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamController.swift; sourceTree = "<group>"; };
+		53AD0DF21F6D83D0006FB94F /* Stream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stream.storyboard; sourceTree = "<group>"; };
+		53AD0DF41F6D8837006FB94F /* EmptySectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySectionController.swift; sourceTree = "<group>"; };
 		53F7B90E1F6D61B100F32833 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		53F7B9101F6D62CC00F32833 /* TitleSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionController.swift; sourceTree = "<group>"; };
 		53F7B9121F6D63E600F32833 /* TextSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionController.swift; sourceTree = "<group>"; };
@@ -216,6 +225,7 @@
 				539E7F921F6D57820013975E /* UIColor+Extensions.swift */,
 				539E7FAC1F6D5DA40013975E /* Diffable.swift */,
 				53F7B9221F6D6D3300F32833 /* GradientView.swift */,
+				53AD0DF41F6D8837006FB94F /* EmptySectionController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -224,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				53F7B9361F6D7E9200F32833 /* StreamViewModel.swift */,
+				53AD0DF01F6D835F006FB94F /* StreamController.swift */,
+				53AD0DF21F6D83D0006FB94F /* Stream.storyboard */,
 			);
 			path = Stream;
 			sourceTree = "<group>";
@@ -442,8 +454,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53AD0DF61F6D8943006FB94F /* Montserrat-Bold.ttf in Resources */,
+				53AD0DF71F6D8943006FB94F /* Montserrat-SemiBold.ttf in Resources */,
+				53AD0DF81F6D8943006FB94F /* Montserrat-Regular.ttf in Resources */,
 				53F7B9311F6D781700F32833 /* Stream.json in Resources */,
 				532F51AA1F6D4C87006FF4F4 /* LaunchScreen.storyboard in Resources */,
+				53AD0DF31F6D83D0006FB94F /* Stream.storyboard in Resources */,
 				53F7B92D1F6D71E100F32833 /* ArticleDetail.json in Resources */,
 				532F51A71F6D4C87006FF4F4 /* Assets.xcassets in Resources */,
 			);
@@ -496,6 +512,7 @@
 				53F7B9331F6D79C800F32833 /* ArticleDetailService.swift in Sources */,
 				539E7FAB1F6D5D820013975E /* CarouselItem.swift in Sources */,
 				539E7FB31F6D5E4E0013975E /* TextBlock.swift in Sources */,
+				53AD0DF51F6D8837006FB94F /* EmptySectionController.swift in Sources */,
 				539E7FA91F6D5D5E0013975E /* CarouselBlock.swift in Sources */,
 				539E7FAF1F6D5DF00013975E /* ImageBlock.swift in Sources */,
 				539E7F911F6D575F0013975E /* String+Extensions.swift in Sources */,
@@ -516,6 +533,7 @@
 				539E7F8F1F6D573D0013975E /* Date+Extensions.swift in Sources */,
 				53F7B9151F6D63F100F32833 /* TextHighlightSectionController.swift in Sources */,
 				532F51A01F6D4C87006FF4F4 /* AppDelegate.swift in Sources */,
+				53AD0DF11F6D835F006FB94F /* StreamController.swift in Sources */,
 				53F7B9111F6D62CC00F32833 /* TitleSectionController.swift in Sources */,
 				539E7FBB1F6D5EA90013975E /* ImageStreamBlock.swift in Sources */,
 				53F7B9131F6D63E600F32833 /* TextSectionController.swift in Sources */,
