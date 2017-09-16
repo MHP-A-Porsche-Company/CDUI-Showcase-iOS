@@ -4,7 +4,7 @@ struct User: Codable {
   let id: String
   let name: String
   let position: String
-  let imageUrl: URL?
+  let imageUrl: String?
 }
 
 extension User: Equatable {

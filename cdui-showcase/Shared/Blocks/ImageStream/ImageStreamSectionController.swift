@@ -11,6 +11,12 @@ final class ImageStreamSectionController: ListSectionController {
     contentInset: UIEdgeInsets(top: Theme.Margin.base, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
   )
 
+  override init() {
+    super.init()
+
+    inset = UIEdgeInsets(top: 0, left: 0, bottom: Theme.Margin.base, right: 0)
+  }
+
   override func numberOfItems() -> Int {
     return 1
   }
@@ -38,4 +44,3 @@ final class ImageStreamSectionController: ListSectionController {
   override func didSelectItem(at index: Int) {
   }
 }
-

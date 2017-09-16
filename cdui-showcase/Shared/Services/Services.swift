@@ -2,6 +2,7 @@ import Foundation
 
 typealias StreamServiceFactory = () -> StreamService
 typealias ArticleDetailServiceFactory = () -> ArticleDetailService
+typealias ImageServiceFactory = () -> ImageService
 
 struct Services {
 //  static var router: Router!
@@ -12,6 +13,10 @@ struct Services {
 
   static func defaultArticleDetailServiceFactory() -> ArticleDetailServiceFactory {
     return { ArticleDetailServiceMock() }
+  }
+
+  static func defaultImageServiceFactory() -> ImageServiceFactory {
+    return { ImageServiceDefault() }
   }
 
 }

@@ -5,30 +5,82 @@ final class ArticleStreamSectionController: ListSectionController {
 
   private var block: ArticleStreamBlock!
 
-  private static let textCellOptions = TextCell.Options(
+  private static let titleOptions = TextCell.Options(
     font: Theme.Font.largeBold,
-    textColor: Theme.Color.text,
-    contentInset: UIEdgeInsets(top: Theme.Margin.base, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
+    textColor: Theme.Color.blue,
+    contentInset: UIEdgeInsets(top: 0, left: Theme.Margin.base, bottom: Theme.Margin.small, right: Theme.Margin.base)
   )
 
+  private static let subtitleOptions = TextCell.Options(
+    font: Theme.Font.large,
+    textColor: Theme.Color.text,
+    contentInset: UIEdgeInsets(top: 0, left: Theme.Margin.base, bottom: Theme.Margin.small, right: Theme.Margin.base)
+  )
+
+  private static let createdOptions = TextCell.Options(
+    font: Theme.Font.micro,
+    textColor: Theme.Color.textLight,
+    contentInset: UIEdgeInsets(top: 0, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
+  )
+
+  override init() {
+    super.init()
+
+    inset = UIEdgeInsets(top: 0, left: 0, bottom: Theme.Margin.base, right: 0)
+  }
+
   override func numberOfItems() -> Int {
-    return 1
+    return 4
   }
 
   override func sizeForItem(at index: Int) -> CGSize {
     let width = collectionContext?.containerSize.width ?? 0
-    let height = TextCell.height(forWidth: width, options: ArticleStreamSectionController.textCellOptions, text: block.title)
-    return CGSize(width: width, height: height)
+
+    if index == 0 {
+      return CGSize(width: width, height: UserCell.preferredHeight)
+    } else if index == 1 {
+      let height = TextCell.height(forWidth: width, options: ArticleStreamSectionController.titleOptions, text: block.title)
+      return CGSize(width: width, height: height)
+    } else if index == 2 {
+      let height = TextCell.height(forWidth: width, options: ArticleStreamSectionController.subtitleOptions, text: block.subtitle)
+      return CGSize(width: width, height: height)
+    } else {
+      let height = TextCell.height(forWidth: width, options: ArticleStreamSectionController.createdOptions, text: "2h ago")
+      return CGSize(width: width, height: height)
+    }
   }
 
   override func cellForItem(at index: Int) -> UICollectionViewCell {
-    let cell = collectionContext!.dequeueReusableCell(of: TextCell.self, for: self, at: index) as! TextCell
+    if index == 0 {
+      let cell = collectionContext!.dequeueReusableCell(withNibName: UserCell.nibName, bundle: nil, for: self, at: index) as! UserCell
 
-    cell.options = ArticleStreamSectionController.textCellOptions
-    cell.text = block.title
+      cell.imageUrl = block.user.imageUrl
+      cell.title = block.user.name
+      cell.subtitle = block.user.position
 
-    return cell
+      return cell
+    } else if index == 1 {
+      let cell = collectionContext!.dequeueReusableCell(of: TextCell.self, for: self, at: index) as! TextCell
 
+      cell.options = ArticleStreamSectionController.titleOptions
+      cell.text = block.title
+
+      return cell
+    } else if index == 2 {
+      let cell = collectionContext!.dequeueReusableCell(of: TextCell.self, for: self, at: index) as! TextCell
+
+      cell.options = ArticleStreamSectionController.subtitleOptions
+      cell.text = block.subtitle
+
+      return cell
+    } else {
+      let cell = collectionContext!.dequeueReusableCell(of: TextCell.self, for: self, at: index) as! TextCell
+
+      cell.options = ArticleStreamSectionController.createdOptions
+      cell.text = "2h ago"
+
+      return cell
+    }
   }
 
   override func didUpdate(to object: Any) {

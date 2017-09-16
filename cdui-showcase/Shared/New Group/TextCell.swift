@@ -48,9 +48,14 @@ class TextCell: UICollectionViewCell {
   }
 
   class func height(forWidth: CGFloat, options: TextCell.Options, text: String?) -> CGFloat {
+    guard let text = text, text.characters.count > 0 else {
+      return 0
+
+    }
+
     let labelWidth = forWidth-options.contentInset.right-options.contentInset.left
 
-    let textHeight = text?.heightWithConstrainedWidth(width: labelWidth, font: options.font) ?? 0
+    let textHeight = text.heightWithConstrainedWidth(width: labelWidth, font: options.font)
 
     return options.contentInset.top + textHeight + options.contentInset.bottom
   }

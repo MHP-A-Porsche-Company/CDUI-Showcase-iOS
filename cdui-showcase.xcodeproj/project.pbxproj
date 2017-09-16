@@ -43,6 +43,13 @@
 		53AD0DFC1F6D8BA6006FB94F /* ArticleStreamSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AD0DFB1F6D8BA6006FB94F /* ArticleStreamSectionController.swift */; };
 		53AD0DFE1F6D8DB9006FB94F /* EventStreamSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AD0DFD1F6D8DB9006FB94F /* EventStreamSectionController.swift */; };
 		53AD0E001F6D8DC5006FB94F /* ImageStreamSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AD0DFF1F6D8DC5006FB94F /* ImageStreamSectionController.swift */; };
+		53AD0E031F6D90B9006FB94F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AD0E021F6D90B9006FB94F /* UserCell.swift */; };
+		53AD0E051F6D90C5006FB94F /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53AD0E041F6D90C5006FB94F /* UserCell.xib */; };
+		53E02C651F6D99F40006911F /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C641F6D99F40006911F /* ImageService.swift */; };
+		53E02C671F6D9A1A0006911F /* ImageServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C661F6D9A1A0006911F /* ImageServiceDefault.swift */; };
+		53E02C691F6D9A930006911F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C681F6D9A930006911F /* Error.swift */; };
+		53E02C6B1F6D9AFD0006911F /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C6A1F6D9AFD0006911F /* RemoteImageView.swift */; };
+		53E02C6D1F6D9B220006911F /* RemoteImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C6C1F6D9B220006911F /* RemoteImageViewModel.swift */; };
 		53F7B90F1F6D61B100F32833 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B90E1F6D61B100F32833 /* TextCell.swift */; };
 		53F7B9111F6D62CC00F32833 /* TitleSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9101F6D62CC00F32833 /* TitleSectionController.swift */; };
 		53F7B9131F6D63E600F32833 /* TextSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F7B9121F6D63E600F32833 /* TextSectionController.swift */; };
@@ -104,6 +111,13 @@
 		53AD0DFB1F6D8BA6006FB94F /* ArticleStreamSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStreamSectionController.swift; sourceTree = "<group>"; };
 		53AD0DFD1F6D8DB9006FB94F /* EventStreamSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStreamSectionController.swift; sourceTree = "<group>"; };
 		53AD0DFF1F6D8DC5006FB94F /* ImageStreamSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStreamSectionController.swift; sourceTree = "<group>"; };
+		53AD0E021F6D90B9006FB94F /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		53AD0E041F6D90C5006FB94F /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		53E02C641F6D99F40006911F /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		53E02C661F6D9A1A0006911F /* ImageServiceDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceDefault.swift; sourceTree = "<group>"; };
+		53E02C681F6D9A930006911F /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		53E02C6A1F6D9AFD0006911F /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
+		53E02C6C1F6D9B220006911F /* RemoteImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageViewModel.swift; sourceTree = "<group>"; };
 		53F7B90E1F6D61B100F32833 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		53F7B9101F6D62CC00F32833 /* TitleSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionController.swift; sourceTree = "<group>"; };
 		53F7B9121F6D63E600F32833 /* TextSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSectionController.swift; sourceTree = "<group>"; };
@@ -228,12 +242,10 @@
 		539E7F8D1F6D570B0013975E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				53F7B90E1F6D61B100F32833 /* TextCell.swift */,
 				539E7F8E1F6D573D0013975E /* Date+Extensions.swift */,
 				539E7F901F6D575F0013975E /* String+Extensions.swift */,
 				539E7F921F6D57820013975E /* UIColor+Extensions.swift */,
 				539E7FAC1F6D5DA40013975E /* Diffable.swift */,
-				53F7B9221F6D6D3300F32833 /* GradientView.swift */,
 				53AD0DF41F6D8837006FB94F /* EmptySectionController.swift */,
 			);
 			path = Utils;
@@ -368,6 +380,12 @@
 		53AD0E011F6D8E1F006FB94F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				53F7B9221F6D6D3300F32833 /* GradientView.swift */,
+				53F7B90E1F6D61B100F32833 /* TextCell.swift */,
+				53AD0E021F6D90B9006FB94F /* UserCell.swift */,
+				53AD0E041F6D90C5006FB94F /* UserCell.xib */,
+				53E02C6A1F6D9AFD0006911F /* RemoteImageView.swift */,
+				53E02C6C1F6D9B220006911F /* RemoteImageViewModel.swift */,
 			);
 			name = Views;
 			path = "New Group";
@@ -387,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				53F7B9201F6D6B6300F32833 /* User.swift */,
+				53E02C681F6D9A930006911F /* Error.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,6 +420,8 @@
 				53F7B9291F6D6EAF00F32833 /* StreamServiceDefault.swift */,
 				53F7B9321F6D79C800F32833 /* ArticleDetailService.swift */,
 				53F7B9341F6D79ED00F32833 /* ArticleDetailServiceMock.swift */,
+				53E02C641F6D99F40006911F /* ImageService.swift */,
+				53E02C661F6D9A1A0006911F /* ImageServiceDefault.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -481,6 +502,7 @@
 				53F7B9311F6D781700F32833 /* Stream.json in Resources */,
 				532F51AA1F6D4C87006FF4F4 /* LaunchScreen.storyboard in Resources */,
 				53AD0DF31F6D83D0006FB94F /* Stream.storyboard in Resources */,
+				53AD0E051F6D90C5006FB94F /* UserCell.xib in Resources */,
 				53F7B92D1F6D71E100F32833 /* ArticleDetail.json in Resources */,
 				532F51A71F6D4C87006FF4F4 /* Assets.xcassets in Resources */,
 			);
@@ -532,7 +554,9 @@
 				53F7B9231F6D6D3300F32833 /* GradientView.swift in Sources */,
 				53F7B9331F6D79C800F32833 /* ArticleDetailService.swift in Sources */,
 				539E7FAB1F6D5D820013975E /* CarouselItem.swift in Sources */,
+				53E02C6D1F6D9B220006911F /* RemoteImageViewModel.swift in Sources */,
 				53AD0DFC1F6D8BA6006FB94F /* ArticleStreamSectionController.swift in Sources */,
+				53AD0E031F6D90B9006FB94F /* UserCell.swift in Sources */,
 				539E7FB31F6D5E4E0013975E /* TextBlock.swift in Sources */,
 				53AD0DF51F6D8837006FB94F /* EmptySectionController.swift in Sources */,
 				539E7FA91F6D5D5E0013975E /* CarouselBlock.swift in Sources */,
@@ -541,6 +565,7 @@
 				539E7F911F6D575F0013975E /* String+Extensions.swift in Sources */,
 				539E7FBD1F6D5EB50013975E /* EventStreamBlock.swift in Sources */,
 				53F7B9211F6D6B6300F32833 /* User.swift in Sources */,
+				53E02C691F6D9A930006911F /* Error.swift in Sources */,
 				539E7FB91F6D5E970013975E /* HeaderBlock.swift in Sources */,
 				53F7B9281F6D6EA000F32833 /* StreamService.swift in Sources */,
 				539E7F981F6D5B590013975E /* Block.swift in Sources */,
@@ -556,13 +581,16 @@
 				539E7F8F1F6D573D0013975E /* Date+Extensions.swift in Sources */,
 				53F7B9151F6D63F100F32833 /* TextHighlightSectionController.swift in Sources */,
 				532F51A01F6D4C87006FF4F4 /* AppDelegate.swift in Sources */,
+				53E02C651F6D99F40006911F /* ImageService.swift in Sources */,
 				53AD0DF11F6D835F006FB94F /* StreamController.swift in Sources */,
 				53AD0DFE1F6D8DB9006FB94F /* EventStreamSectionController.swift in Sources */,
 				53F7B9111F6D62CC00F32833 /* TitleSectionController.swift in Sources */,
+				53E02C671F6D9A1A0006911F /* ImageServiceDefault.swift in Sources */,
 				539E7FBB1F6D5EA90013975E /* ImageStreamBlock.swift in Sources */,
 				53F7B9131F6D63E600F32833 /* TextSectionController.swift in Sources */,
 				53F7B91A1F6D64CF00F32833 /* StreamSpace.swift in Sources */,
 				53F7B92A1F6D6EAF00F32833 /* StreamServiceDefault.swift in Sources */,
+				53E02C6B1F6D9AFD0006911F /* RemoteImageView.swift in Sources */,
 				539E7FB11F6D5E450013975E /* TextHighlightBlock.swift in Sources */,
 				539E7F9A1F6D5B7F0013975E /* BlockType.swift in Sources */,
 				539E7FAD1F6D5DA40013975E /* Diffable.swift in Sources */,

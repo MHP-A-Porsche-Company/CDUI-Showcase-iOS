@@ -6,9 +6,9 @@ import IGListKit
 
 final class StreamController: UIViewController {
 
-  @IBOutlet weak var headerView: UIView!
-  @IBOutlet weak var headerLabel: UILabel!
-  @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet private weak var headerView: UIView!
+  @IBOutlet private weak var headerLabel: UILabel!
+  @IBOutlet private weak var collectionView: UICollectionView!
 
   private (set) var adapter: ListAdapter!
 

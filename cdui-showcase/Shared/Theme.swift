@@ -58,7 +58,8 @@ struct Theme {
     // Initial variables
     static var black: UIColor { return UIColor(hex: "#000000") }
 
-    static var greyDark: UIColor { return UIColor(hex: "#535353") }
+    static var greyDarker: UIColor { return UIColor(hex: "#535353") }
+    static var greyDark: UIColor { return UIColor(hex: "#9E9E9E") }
     static var grey: UIColor { return UIColor(hex: "#EAEAEA") }
     static var greyLight: UIColor { return UIColor(hex: "#F8F8F8") }
 
@@ -67,7 +68,8 @@ struct Theme {
     static var blue: UIColor { return UIColor(hex: "#0505E0") }
 
     // Derived variables
-    static var text: UIColor { return Theme.Color.greyDark }
+    static var text: UIColor { return Theme.Color.greyDarker }
+    static var textLight: UIColor { return Theme.Color.greyDark }
     static var textInvert: UIColor { return Theme.Color.white }
 
     static var background: UIColor { return Theme.Color.white }
