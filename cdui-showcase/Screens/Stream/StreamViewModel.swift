@@ -20,10 +20,15 @@ struct StreamViewModel {
   }
 
   private func setupBindings() {
-    active.asObservable()
-      .distinctUntilChanged()
-      .flatMapLatest({ _ in
-        return self.streamService.getSpace()
+    Observable.combineLatest(
+      active.asObservable(),
+
+      // Listen, this is obviously something you should never do, but if we edit the json serverside the changes show up instantly in the app,
+      // which makes for a good demo, which is nice
+      Observable<Int>.interval(1, scheduler: ConcurrentDispatchQueueScheduler(qos: .background)))
+
+      .flatMapLatest({ (active, _) -> Observable<StreamSpace> in
+        return active ? self.streamService.getSpace() : Observable.empty()
       })
       .subscribe(onNext: { space in
         self.spaceInternal.value = space

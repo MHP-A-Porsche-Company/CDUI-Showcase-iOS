@@ -12,7 +12,7 @@ struct Services {
   }
 
   static func defaultArticleDetailServiceFactory() -> ArticleDetailServiceFactory {
-    return { ArticleDetailServiceMock() }
+    return { ArticleDetailServiceDefault() }
   }
 
   static func defaultImageServiceFactory() -> ImageServiceFactory {

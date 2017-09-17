@@ -57,6 +57,7 @@ struct ImageServiceDefault: ImageService {
         observer.onCompleted()
       })
 
+      Log.task(task)
       task.resume()
 
       return Disposables.create {

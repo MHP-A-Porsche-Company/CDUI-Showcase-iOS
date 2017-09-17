@@ -11,6 +11,9 @@
 		532F51A71F6D4C87006FF4F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 532F51A61F6D4C87006FF4F4 /* Assets.xcassets */; };
 		532F51AA1F6D4C87006FF4F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 532F51A81F6D4C87006FF4F4 /* LaunchScreen.storyboard */; };
 		536663681F6EE30300E10E7E /* CarouselSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536663671F6EE30300E10E7E /* CarouselSectionController.swift */; };
+		5366636A1F6EEACC00E10E7E /* ArticleDetailServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536663691F6EEACB00E10E7E /* ArticleDetailServiceDefault.swift */; };
+		5366636C1F6EEE7D00E10E7E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366636B1F6EEE7D00E10E7E /* Log.swift */; };
+		5366636E1F6EEEDB00E10E7E /* ObservableRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366636D1F6EEEDB00E10E7E /* ObservableRequestBuilder.swift */; };
 		539E7F7D1F6D4FE20013975E /* AwesomeCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539E7F781F6D4FE20013975E /* AwesomeCache.framework */; };
 		539E7F7E1F6D4FE20013975E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539E7F791F6D4FE20013975E /* RxCocoa.framework */; };
 		539E7F801F6D4FE20013975E /* IGListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 539E7F7B1F6D4FE20013975E /* IGListKit.framework */; };
@@ -97,6 +100,9 @@
 		532F51A91F6D4C87006FF4F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		532F51AB1F6D4C87006FF4F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		536663671F6EE30300E10E7E /* CarouselSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselSectionController.swift; sourceTree = "<group>"; };
+		536663691F6EEACB00E10E7E /* ArticleDetailServiceDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailServiceDefault.swift; sourceTree = "<group>"; };
+		5366636B1F6EEE7D00E10E7E /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		5366636D1F6EEEDB00E10E7E /* ObservableRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableRequestBuilder.swift; sourceTree = "<group>"; };
 		539E7F781F6D4FE20013975E /* AwesomeCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AwesomeCache.framework; path = Carthage/Build/iOS/AwesomeCache.framework; sourceTree = "<group>"; };
 		539E7F791F6D4FE20013975E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		539E7F7B1F6D4FE20013975E /* IGListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IGListKit.framework; path = Carthage/Build/iOS/IGListKit.framework; sourceTree = "<group>"; };
@@ -285,6 +291,8 @@
 				539E7F921F6D57820013975E /* UIColor+Extensions.swift */,
 				539E7FAC1F6D5DA40013975E /* Diffable.swift */,
 				53AD0DF41F6D8837006FB94F /* EmptySectionController.swift */,
+				5366636B1F6EEE7D00E10E7E /* Log.swift */,
+				5366636D1F6EEEDB00E10E7E /* ObservableRequestBuilder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -293,8 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				53F7B9271F6D6EA000F32833 /* StreamService.swift */,
-				53F7B92F1F6D759C00F32833 /* StreamServiceMock.swift */,
 				53F7B9291F6D6EAF00F32833 /* StreamServiceDefault.swift */,
+				53F7B92F1F6D759C00F32833 /* StreamServiceMock.swift */,
 				53F7B9361F6D7E9200F32833 /* StreamViewModel.swift */,
 				53AD0DF01F6D835F006FB94F /* StreamController.swift */,
 				53AD0DF21F6D83D0006FB94F /* Stream.storyboard */,
@@ -306,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				53F7B9321F6D79C800F32833 /* ArticleDetailService.swift */,
+				536663691F6EEACB00E10E7E /* ArticleDetailServiceDefault.swift */,
 				53F7B9341F6D79ED00F32833 /* ArticleDetailServiceMock.swift */,
 				53F7B93A1F6D81D600F32833 /* ArticleDetailViewModel.swift */,
 				53DFBD9C1F6E8592006843D0 /* ArticleDetailController.swift */,
@@ -662,7 +671,9 @@
 				53F7B9181F6D64A800F32833 /* Space.swift in Sources */,
 				53EA1FF41F6DADAC00005336 /* DateFormatter+Extensions.swift in Sources */,
 				539E7F8C1F6D526D0013975E /* Theme.swift in Sources */,
+				5366636C1F6EEE7D00E10E7E /* Log.swift in Sources */,
 				539E7F8F1F6D573D0013975E /* Date+Extensions.swift in Sources */,
+				5366636A1F6EEACC00E10E7E /* ArticleDetailServiceDefault.swift in Sources */,
 				53DDA6071F6DAA2900A2D9A8 /* HairlineConstraint.swift in Sources */,
 				53F7B9151F6D63F100F32833 /* TextHighlightSectionController.swift in Sources */,
 				53D725301F6EB024006424F8 /* ArticleHeaderSectionController.swift in Sources */,
@@ -673,6 +684,7 @@
 				53F7B9111F6D62CC00F32833 /* TitleSectionController.swift in Sources */,
 				53E02C671F6D9A1A0006911F /* ImageServiceDefault.swift in Sources */,
 				53DFBD991F6E8075006843D0 /* StreamRouteFactory.swift in Sources */,
+				5366636E1F6EEEDB00E10E7E /* ObservableRequestBuilder.swift in Sources */,
 				539E7FBB1F6D5EA90013975E /* ImageStreamBlock.swift in Sources */,
 				53DFBD941F6DD90A006843D0 /* RouteFactory.swift in Sources */,
 				53F7B9131F6D63E600F32833 /* TextSectionController.swift in Sources */,

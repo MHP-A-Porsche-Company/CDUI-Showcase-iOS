@@ -1,9 +1,10 @@
-//
-//  StreamServiceDefault.swift
-//  cdui-showcase
-//
-//  Created by Christoph Albert on 16.09.17.
-//  Copyright © 2017 MHP. All rights reserved.
-//
-
 import Foundation
+import RxSwift
+import RxCocoa
+
+struct StreamServiceDefault: StreamService {
+  func getSpace() -> Observable<StreamSpace> {
+    let url = "\(Backend.baseURL)/stream.json"
+    return ObservableRequestBuilder.build(url: url)
+  }
+}
