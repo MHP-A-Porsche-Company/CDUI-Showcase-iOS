@@ -47,6 +47,13 @@
 		53AD0E051F6D90C5006FB94F /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53AD0E041F6D90C5006FB94F /* UserCell.xib */; };
 		53DDA6051F6D9F5900A2D9A8 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDA6041F6D9F5900A2D9A8 /* ImageCell.swift */; };
 		53DDA6071F6DAA2900A2D9A8 /* HairlineConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DDA6061F6DAA2900A2D9A8 /* HairlineConstraint.swift */; };
+		53DFBD921F6DD8DF006843D0 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DFBD911F6DD8DF006843D0 /* Route.swift */; };
+		53DFBD941F6DD90A006843D0 /* RouteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DFBD931F6DD90A006843D0 /* RouteFactory.swift */; };
+		53DFBD961F6DD927006843D0 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DFBD951F6DD927006843D0 /* Router.swift */; };
+		53DFBD991F6E8075006843D0 /* StreamRouteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DFBD981F6E8075006843D0 /* StreamRouteFactory.swift */; };
+		53DFBD9B1F6E807F006843D0 /* ArticleDetailRouteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DFBD9A1F6E807F006843D0 /* ArticleDetailRouteFactory.swift */; };
+		53DFBD9D1F6E8592006843D0 /* ArticleDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DFBD9C1F6E8592006843D0 /* ArticleDetailController.swift */; };
+		53DFBD9F1F6E859E006843D0 /* ArticleDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DFBD9E1F6E859E006843D0 /* ArticleDetail.storyboard */; };
 		53E02C651F6D99F40006911F /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C641F6D99F40006911F /* ImageService.swift */; };
 		53E02C671F6D9A1A0006911F /* ImageServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C661F6D9A1A0006911F /* ImageServiceDefault.swift */; };
 		53E02C691F6D9A930006911F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E02C681F6D9A930006911F /* Error.swift */; };
@@ -119,6 +126,13 @@
 		53AD0E041F6D90C5006FB94F /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		53DDA6041F6D9F5900A2D9A8 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		53DDA6061F6DAA2900A2D9A8 /* HairlineConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairlineConstraint.swift; sourceTree = "<group>"; };
+		53DFBD911F6DD8DF006843D0 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		53DFBD931F6DD90A006843D0 /* RouteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteFactory.swift; sourceTree = "<group>"; };
+		53DFBD951F6DD927006843D0 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		53DFBD981F6E8075006843D0 /* StreamRouteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamRouteFactory.swift; sourceTree = "<group>"; };
+		53DFBD9A1F6E807F006843D0 /* ArticleDetailRouteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailRouteFactory.swift; sourceTree = "<group>"; };
+		53DFBD9C1F6E8592006843D0 /* ArticleDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailController.swift; sourceTree = "<group>"; };
+		53DFBD9E1F6E859E006843D0 /* ArticleDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArticleDetail.storyboard; sourceTree = "<group>"; };
 		53E02C641F6D99F40006911F /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		53E02C661F6D9A1A0006911F /* ImageServiceDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceDefault.swift; sourceTree = "<group>"; };
 		53E02C681F6D9A930006911F /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -227,6 +241,7 @@
 		539E7F891F6D523D0013975E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				53EA1FF71F6DD7A500005336 /* Router */,
 				53F7B9241F6D6E8400F32833 /* Services */,
 				53F7B91F1F6D6B5700F32833 /* Models */,
 				53F7B9161F6D648700F32833 /* Spaces */,
@@ -263,6 +278,9 @@
 		539E7F941F6D5B210013975E /* Stream */ = {
 			isa = PBXGroup;
 			children = (
+				53F7B9271F6D6EA000F32833 /* StreamService.swift */,
+				53F7B92F1F6D759C00F32833 /* StreamServiceMock.swift */,
+				53F7B9291F6D6EAF00F32833 /* StreamServiceDefault.swift */,
 				53F7B9361F6D7E9200F32833 /* StreamViewModel.swift */,
 				53AD0DF01F6D835F006FB94F /* StreamController.swift */,
 				53AD0DF21F6D83D0006FB94F /* Stream.storyboard */,
@@ -273,7 +291,11 @@
 		539E7F951F6D5B260013975E /* ArticleDetail */ = {
 			isa = PBXGroup;
 			children = (
+				53F7B9321F6D79C800F32833 /* ArticleDetailService.swift */,
+				53F7B9341F6D79ED00F32833 /* ArticleDetailServiceMock.swift */,
 				53F7B93A1F6D81D600F32833 /* ArticleDetailViewModel.swift */,
+				53DFBD9C1F6E8592006843D0 /* ArticleDetailController.swift */,
+				53DFBD9E1F6E859E006843D0 /* ArticleDetail.storyboard */,
 			);
 			path = ArticleDetail;
 			sourceTree = "<group>";
@@ -403,6 +425,26 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		53DFBD971F6DDB2E006843D0 /* RouteFactories */ = {
+			isa = PBXGroup;
+			children = (
+				53DFBD981F6E8075006843D0 /* StreamRouteFactory.swift */,
+				53DFBD9A1F6E807F006843D0 /* ArticleDetailRouteFactory.swift */,
+			);
+			path = RouteFactories;
+			sourceTree = "<group>";
+		};
+		53EA1FF71F6DD7A500005336 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				53DFBD971F6DDB2E006843D0 /* RouteFactories */,
+				53DFBD911F6DD8DF006843D0 /* Route.swift */,
+				53DFBD931F6DD90A006843D0 /* RouteFactory.swift */,
+				53DFBD951F6DD927006843D0 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		53F7B9161F6D648700F32833 /* Spaces */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,11 +469,6 @@
 			children = (
 				53F7B9381F6D7F1800F32833 /* Backend.swift */,
 				53F7B9251F6D6E9300F32833 /* Services.swift */,
-				53F7B9271F6D6EA000F32833 /* StreamService.swift */,
-				53F7B92F1F6D759C00F32833 /* StreamServiceMock.swift */,
-				53F7B9291F6D6EAF00F32833 /* StreamServiceDefault.swift */,
-				53F7B9321F6D79C800F32833 /* ArticleDetailService.swift */,
-				53F7B9341F6D79ED00F32833 /* ArticleDetailServiceMock.swift */,
 				53E02C641F6D99F40006911F /* ImageService.swift */,
 				53E02C661F6D9A1A0006911F /* ImageServiceDefault.swift */,
 			);
@@ -510,6 +547,7 @@
 			files = (
 				53AD0DF61F6D8943006FB94F /* Montserrat-Bold.ttf in Resources */,
 				53AD0DF71F6D8943006FB94F /* Montserrat-SemiBold.ttf in Resources */,
+				53DFBD9F1F6E859E006843D0 /* ArticleDetail.storyboard in Resources */,
 				53AD0DF81F6D8943006FB94F /* Montserrat-Regular.ttf in Resources */,
 				53F7B9311F6D781700F32833 /* Stream.json in Resources */,
 				532F51AA1F6D4C87006FF4F4 /* LaunchScreen.storyboard in Resources */,
@@ -562,6 +600,8 @@
 			files = (
 				539E7F9C1F6D5C540013975E /* BlockDecoder.swift in Sources */,
 				539E7FBF1F6D5EC50013975E /* ArticleStreamBlock.swift in Sources */,
+				53DFBD9B1F6E807F006843D0 /* ArticleDetailRouteFactory.swift in Sources */,
+				53DFBD9D1F6E8592006843D0 /* ArticleDetailController.swift in Sources */,
 				53F7B9371F6D7E9200F32833 /* StreamViewModel.swift in Sources */,
 				53F7B9231F6D6D3300F32833 /* GradientView.swift in Sources */,
 				53F7B9331F6D79C800F32833 /* ArticleDetailService.swift in Sources */,
@@ -573,6 +613,7 @@
 				539E7FB31F6D5E4E0013975E /* TextBlock.swift in Sources */,
 				53AD0DF51F6D8837006FB94F /* EmptySectionController.swift in Sources */,
 				539E7FA91F6D5D5E0013975E /* CarouselBlock.swift in Sources */,
+				53DFBD921F6DD8DF006843D0 /* Route.swift in Sources */,
 				53AD0DFA1F6D8A99006FB94F /* BlockSectionControllerFactory.swift in Sources */,
 				539E7FAF1F6D5DF00013975E /* ImageBlock.swift in Sources */,
 				539E7F911F6D575F0013975E /* String+Extensions.swift in Sources */,
@@ -584,6 +625,7 @@
 				539E7F981F6D5B590013975E /* Block.swift in Sources */,
 				53F7B91C1F6D652100F32833 /* ArticleDetailSpace.swift in Sources */,
 				53F7B90F1F6D61B100F32833 /* TextCell.swift in Sources */,
+				53DFBD961F6DD927006843D0 /* Router.swift in Sources */,
 				53DDA6051F6D9F5900A2D9A8 /* ImageCell.swift in Sources */,
 				539E7F931F6D57820013975E /* UIColor+Extensions.swift in Sources */,
 				53F7B9261F6D6E9300F32833 /* Services.swift in Sources */,
@@ -602,7 +644,9 @@
 				53AD0DFE1F6D8DB9006FB94F /* EventStreamSectionController.swift in Sources */,
 				53F7B9111F6D62CC00F32833 /* TitleSectionController.swift in Sources */,
 				53E02C671F6D9A1A0006911F /* ImageServiceDefault.swift in Sources */,
+				53DFBD991F6E8075006843D0 /* StreamRouteFactory.swift in Sources */,
 				539E7FBB1F6D5EA90013975E /* ImageStreamBlock.swift in Sources */,
+				53DFBD941F6DD90A006843D0 /* RouteFactory.swift in Sources */,
 				53F7B9131F6D63E600F32833 /* TextSectionController.swift in Sources */,
 				53F7B91A1F6D64CF00F32833 /* StreamSpace.swift in Sources */,
 				53F7B92A1F6D6EAF00F32833 /* StreamServiceDefault.swift in Sources */,

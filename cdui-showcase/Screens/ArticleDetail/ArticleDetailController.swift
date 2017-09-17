@@ -4,21 +4,21 @@ import RxSwift
 import RxCocoa
 import IGListKit
 
-final class StreamController: UIViewController {
+final class ArticleDetailController: UIViewController {
 
   @IBOutlet private weak var collectionView: UICollectionView!
 
   private (set) var adapter: ListAdapter!
 
-  private var viewModel: StreamViewModel!
+  private var viewModel: ArticleDetailViewModel!
 
   private let blocks: Variable<[Block]> = Variable([])
 
   private let disposeBag = DisposeBag()
 
-  class func create(viewModel: StreamViewModel) -> StreamController {
-    let storyboard = UIStoryboard(name: "Stream", bundle: nil)
-    let viewController = storyboard.instantiateInitialViewController() as! StreamController
+  class func create(viewModel: ArticleDetailViewModel) -> ArticleDetailController {
+    let storyboard = UIStoryboard(name: "ArticleDetail", bundle: nil)
+    let viewController = storyboard.instantiateInitialViewController() as! ArticleDetailController
     viewController.viewModel = viewModel
     return viewController
   }
@@ -65,7 +65,7 @@ final class StreamController: UIViewController {
   }
 }
 
-extension StreamController: ListAdapterDataSource {
+extension ArticleDetailController: ListAdapterDataSource {
   func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
     return blocks.value.map({ $0.listDiffable })
   }

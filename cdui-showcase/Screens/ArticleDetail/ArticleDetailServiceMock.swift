@@ -3,17 +3,7 @@ import RxSwift
 import RxCocoa
 
 struct ArticleDetailServiceMock: ArticleDetailService {
-  var space: Driver<ArticleDetailSpace> {
-    if let space = mockSpace {
-      return Driver.just(space)
-    }
-
-    return Driver.empty()
-  }
-
-  private let mockSpace: ArticleDetailSpace?
-
-  init() {
+  func getSpace(articleId: String) -> Observable<ArticleDetailSpace> {
     if let path = Bundle.main.path(forResource: "ArticleDetail", ofType: "json") {
       do {
         let decoder = JSONDecoder()
@@ -22,13 +12,13 @@ struct ArticleDetailServiceMock: ArticleDetailService {
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
         let space = try decoder.decode(ArticleDetailSpace.self, from: data)
 
-        mockSpace = space
+        return Observable.just(space)
       } catch let error {
         print(error)
-        mockSpace = nil
+        return Observable.empty()
       }
     } else {
-      mockSpace = nil
+      return Observable.empty()
     }
   }
 }

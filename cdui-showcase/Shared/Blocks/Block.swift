@@ -1,4 +1,7 @@
-typealias BlockTarget = (() -> Void)
+import Foundation
+import UIKit
+
+typealias BlockTarget = String
 
 protocol Block: Codable, Diffable {
   var id: String { get }
@@ -18,5 +21,15 @@ extension Block {
     }
 
     return allItemsEqual
+  }
+}
+
+extension BlockTarget {
+  func navigate() {
+    guard let url = URL(string: self) else {
+      return
+    }
+
+    Services.router.navigate(toUrl: url)
   }
 }

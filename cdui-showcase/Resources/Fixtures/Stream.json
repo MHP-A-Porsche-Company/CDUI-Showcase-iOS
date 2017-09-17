@@ -14,10 +14,11 @@
                 "position": "Design Technologist",
                 "imageUrl": null
             },
-            "imageUrl": "test",
+            "imageUrl": "text",
             "title": "Nike Running App Concept",
             "subtitle": "A slick and smooth idea for a Nike Running App concept.",
-            "created": 1505574199000
+            "created": 1505574199000,
+            "target": "cdui-showcase://space/article?id=123"
         },
         {
             "id": "102",
@@ -57,7 +58,8 @@
             "imageUrl": null,
             "title": "Nike Running App Concept",
             "subtitle": "A slick and smooth idea for a Nike Running App concept.",
-            "created": 1505574199000
+            "created": 1505574199000,
+            "target": "http://google.com"
         }
     ]
 }

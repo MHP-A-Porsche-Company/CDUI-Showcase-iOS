@@ -4,13 +4,33 @@ import RxCocoa
 struct ArticleDetailViewModel {
   let active: Variable<Bool> = Variable(false)
 
-  var space: Driver<ArticleDetailSpace> {
-    return articleDetailService.space
+  var space: Driver<ArticleDetailSpace?> {
+    return spaceInternal.asDriver()
   }
+
+  private let spaceInternal: Variable<ArticleDetailSpace?> = Variable(nil)
+
+  private let articleId: String
 
   private let articleDetailService: ArticleDetailService
 
-  init(articleDetailServiceFactory: ArticleDetailServiceFactory = Services.defaultArticleDetailServiceFactory()) {
+  private let disposeBag = DisposeBag()
+
+  init(articleId: String,
+       articleDetailServiceFactory: ArticleDetailServiceFactory = Services.defaultArticleDetailServiceFactory()) {
+    self.articleId = articleId
     articleDetailService  = articleDetailServiceFactory()
+  }
+
+  private func setupBindings() {
+    active.asObservable()
+      .distinctUntilChanged()
+      .flatMapLatest({ _ in
+        return self.articleDetailService.getSpace(articleId: self.articleId)
+      })
+      .subscribe(onNext: { space in
+        self.spaceInternal.value = space
+      })
+      .addDisposableTo(disposeBag)
   }
 }

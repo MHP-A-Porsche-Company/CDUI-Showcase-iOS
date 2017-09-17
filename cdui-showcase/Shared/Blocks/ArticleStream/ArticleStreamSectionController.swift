@@ -102,5 +102,6 @@ final class ArticleStreamSectionController: ListSectionController {
   }
 
   override func didSelectItem(at index: Int) {
+    block.target?.navigate()
   }
 }

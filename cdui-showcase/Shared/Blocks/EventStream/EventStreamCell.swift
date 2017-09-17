@@ -110,7 +110,7 @@ final class EventStreamCell: UICollectionViewCell {
     let labelMargin = titleHeight > 0 && subtitleHeight > 0 ? EventStreamCell.labelMargin : 0
 
     gradient.frame = contentView.bounds
-    
+
     eventLabel.frame = CGRect(x: labelX, y: EventStreamCell.marginTop, width: labelWidth, height: EventStreamCell.eventLabelHeight)
     dateLabel.frame = CGRect(x: labelX, y: eventLabel.frame.maxY, width: labelWidth, height: EventStreamCell.dateLabelHeight)
 
@@ -124,7 +124,7 @@ final class EventStreamCell: UICollectionViewCell {
     subtitleLabel.text = ""
   }
 
-  private static func getHeight(forWidth width:CGFloat, title: String) -> CGFloat {
+  private static func getHeight(forWidth width: CGFloat, title: String) -> CGFloat {
     let titleHeight: CGFloat
 
     if title.characters.count > 0 {
@@ -136,7 +136,7 @@ final class EventStreamCell: UICollectionViewCell {
     return titleHeight
   }
 
-  private static func getHeight(forWidth width:CGFloat, subtitle: String) -> CGFloat {
+  private static func getHeight(forWidth width: CGFloat, subtitle: String) -> CGFloat {
     let subtitleHeight: CGFloat
 
     if subtitle.characters.count > 0 {

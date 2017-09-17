@@ -7,6 +7,7 @@ struct ArticleStreamBlock: Block {
   let title: String
   let subtitle: String
   let created: Date
+  let target: BlockTarget?
 }
 
 extension ArticleStreamBlock: Diffable {
@@ -31,5 +32,6 @@ extension ArticleStreamBlock: Equatable {
       && lhs.title == rhs.title
       && lhs.subtitle == rhs.subtitle
       && lhs.created == rhs.created
+      && lhs.target == rhs.target
   }
 }

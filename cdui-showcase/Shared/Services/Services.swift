@@ -5,7 +5,7 @@ typealias ArticleDetailServiceFactory = () -> ArticleDetailService
 typealias ImageServiceFactory = () -> ImageService
 
 struct Services {
-//  static var router: Router!
+  static var router: Router!
 
   static func defaultStreamServiceFactory() -> StreamServiceFactory {
     return { StreamServiceMock() }
