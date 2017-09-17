@@ -21,7 +21,7 @@ final class BlockDecoder {
       case .eventStream:
         decodedBlocks.append(try blockDecoder.decode(EventStreamBlock.self))
       case .header:
-        decodedBlocks.append(try blockDecoder.decode(HeaderBlock.self))
+        decodedBlocks.append(try blockDecoder.decode(ArticleHeaderBlock.self))
       case .user:
         decodedBlocks.append(try blockDecoder.decode(UserBlock.self))
       case .title:

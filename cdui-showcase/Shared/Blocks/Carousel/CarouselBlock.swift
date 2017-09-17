@@ -1,5 +1,6 @@
 struct CarouselBlock: Block {
   let id: String
+  let title: String?
   let items: [CarouselItem]
 }
 

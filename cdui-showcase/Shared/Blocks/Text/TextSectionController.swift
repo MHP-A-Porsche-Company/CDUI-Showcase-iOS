@@ -8,7 +8,8 @@ final class TextSectionController: ListSectionController {
   private static let textCellOptions = TextCell.Options(
     font: Theme.Font.base,
     textColor: Theme.Color.text,
-    contentInset: UIEdgeInsets(top: Theme.Margin.base, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
+    lineSpacing: Theme.LineSpacing.wide,
+    contentInset: UIEdgeInsets(top: Theme.Margin.small, left: Theme.Margin.base, bottom: Theme.Margin.small, right: Theme.Margin.base)
   )
 
   override func numberOfItems() -> Int {

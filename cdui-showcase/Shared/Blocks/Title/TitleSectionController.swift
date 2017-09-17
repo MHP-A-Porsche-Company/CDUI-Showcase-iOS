@@ -6,9 +6,9 @@ final class TitleSectionController: ListSectionController {
   private var block: TitleBlock!
 
   private static let textCellOptions = TextCell.Options(
-    font: Theme.Font.largeBold,
+    font: Theme.Font.large,
     textColor: Theme.Color.text,
-    contentInset: UIEdgeInsets(top: Theme.Margin.base, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
+    contentInset: UIEdgeInsets(top: Theme.Margin.base, left: Theme.Margin.base, bottom: Theme.Margin.tiny, right: Theme.Margin.base)
   )
 
   override func numberOfItems() -> Int {

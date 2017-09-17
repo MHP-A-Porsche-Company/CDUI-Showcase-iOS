@@ -10,6 +10,11 @@ struct Theme {
     static var xlarge: CGFloat { return 64 }
   }
 
+  struct LineSpacing {
+    static var base: CGFloat { return 4 }
+    static var wide: CGFloat { return 7 }
+  }
+
   struct Font {
     static var largeBold: UIFont {
       return Theme.FontFace.bold(size: 20)

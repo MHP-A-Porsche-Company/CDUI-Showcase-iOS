@@ -6,15 +6,14 @@ class TextCell: UICollectionViewCell {
 
   var text: String? {
     didSet {
-      textLabel.text = text
+      textLabel.attributedText = TextCell.attributedText(with: text, options: options)
       setNeedsLayout()
     }
   }
 
-  var options = TextCell.defaultOptions {
+  var options = TextCell.Options() {
     didSet {
-      textLabel.font = options.font
-      textLabel.textColor = options.textColor
+      textLabel.attributedText = TextCell.attributedText(with: text, options: options)
       setNeedsLayout()
     }
   }
@@ -48,6 +47,16 @@ class TextCell: UICollectionViewCell {
     textLabel.frame = CGRect(x: options.contentInset.left, y: options.contentInset.top, width: labelWidth, height: labelHeight)
   }
 
+  static func attributedText(with text: String?, options: TextCell.Options) -> NSAttributedString {
+    let paragraph = NSMutableParagraphStyle()
+    paragraph.lineSpacing = options.lineSpacing
+
+    return NSAttributedString(string: text ?? "", attributes: [
+      NSAttributedStringKey.font: options.font,
+      NSAttributedStringKey.foregroundColor: options.textColor,
+      NSAttributedStringKey.paragraphStyle: paragraph])
+  }
+
   class func height(forWidth: CGFloat, options: TextCell.Options, text: String?) -> CGFloat {
     guard let text = text, text.characters.count > 0 else {
       return 0
@@ -56,7 +65,7 @@ class TextCell: UICollectionViewCell {
 
     let labelWidth = forWidth-options.contentInset.right-options.contentInset.left
 
-    let textHeight = text.heightWithConstrainedWidth(width: labelWidth, font: options.font)
+    let textHeight = TextCell.attributedText(with: text, options: options).heightWithConstrainedWidth(width: labelWidth)
 
     return options.contentInset.top + textHeight + options.contentInset.bottom
   }
@@ -66,12 +75,17 @@ extension TextCell {
   struct Options {
     let font: UIFont
     let textColor: UIColor
+    let lineSpacing: CGFloat
     let contentInset: UIEdgeInsets
-  }
 
-  static let defaultOptions = TextCell.Options(
-    font: Theme.Font.base,
-    textColor: Theme.Color.text,
-    contentInset: UIEdgeInsets(top: Theme.Margin.base, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
-  )
+    init(font: UIFont = Theme.Font.base,
+         textColor: UIColor = Theme.Color.text,
+         lineSpacing: CGFloat = Theme.LineSpacing.base,
+         contentInset: UIEdgeInsets = UIEdgeInsets(top: Theme.Margin.base, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)) {
+      self.font = font
+      self.textColor = textColor
+      self.lineSpacing = lineSpacing
+      self.contentInset = contentInset
+    }
+  }
 }

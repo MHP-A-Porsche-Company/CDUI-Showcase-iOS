@@ -12,6 +12,12 @@ struct BlockSectionControllerFactory {
     case _ as ListDiffableBox<EventStreamBlock>:
       return EventStreamSectionController()
 
+    case _ as ListDiffableBox<ArticleHeaderBlock>:
+      return ArticleHeaderSectionController()
+
+    case _ as ListDiffableBox<UserBlock>:
+      return UserSectionController()
+
     case _ as ListDiffableBox<TitleBlock>:
       return TitleSectionController()
 
@@ -20,6 +26,12 @@ struct BlockSectionControllerFactory {
 
     case _ as ListDiffableBox<TextHighlightBlock>:
       return TextHighlightSectionController()
+
+    case _ as ListDiffableBox<ImageBlock>:
+      return ImageSectionController()
+
+    case _ as ListDiffableBox<CarouselBlock>:
+      return CarouselSectionController()
 
     default:
       print("Encountered block with unexpected type \(object) in \(type(of: self)).")

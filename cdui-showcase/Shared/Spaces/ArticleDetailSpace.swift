@@ -8,7 +8,7 @@ struct ArticleDetailSpace: Space {
 
 extension ArticleDetailSpace {
   struct Header: Codable {
-    let imageUrl: URL?
+    let imageUrl: String?
   }
 }
 

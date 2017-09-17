@@ -3,7 +3,7 @@ import Foundation
 struct ImageBlock: Block {
   let id: String
   let text: String
-  let imageUrl: URL?
+  let imageUrl: String?
 }
 
 extension ImageBlock: Diffable {

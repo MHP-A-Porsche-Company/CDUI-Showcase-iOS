@@ -20,6 +20,8 @@ struct ArticleDetailViewModel {
        articleDetailServiceFactory: ArticleDetailServiceFactory = Services.defaultArticleDetailServiceFactory()) {
     self.articleId = articleId
     articleDetailService  = articleDetailServiceFactory()
+
+    setupBindings()
   }
 
   private func setupBindings() {

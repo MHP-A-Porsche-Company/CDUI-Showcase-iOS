@@ -2,8 +2,8 @@ import Foundation
 
 struct CarouselItem: Codable {
   let id: String
-  let text: String
-  let imageUrl: URL?
+  let text: String?
+  let imageUrl: String?
 }
 
 extension CarouselItem: Equatable {

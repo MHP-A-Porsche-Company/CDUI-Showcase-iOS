@@ -11,14 +11,14 @@ final class EventStreamCell: UICollectionViewCell {
 
   var title: String? {
     didSet {
-      titleLabel.text = title
+      titleLabel.attributedText = EventStreamCell.attributedTitle(title)
       setNeedsLayout()
     }
   }
 
   var subtitle: String? {
     didSet {
-      subtitleLabel.text = subtitle
+      subtitleLabel.attributedText = EventStreamCell.attributedSubtitle(subtitle)
       setNeedsLayout()
     }
   }
@@ -37,9 +37,6 @@ final class EventStreamCell: UICollectionViewCell {
   static private let dateLabelHeight: CGFloat = 20
   static private let titleLabelMarginTop: CGFloat = Theme.Margin.base
   static private let labelMargin: CGFloat = Theme.Margin.small
-
-  static private let titleFont = Theme.Font.largeBold
-  static private let subtitleFont = Theme.Font.large
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -71,13 +68,9 @@ final class EventStreamCell: UICollectionViewCell {
     dateLabel.numberOfLines = 1
     contentView.addSubview(dateLabel)
 
-    titleLabel.textColor = Theme.Color.textInvert
-    titleLabel.font = Theme.Font.largeBold
     titleLabel.numberOfLines = 0
     contentView.addSubview(titleLabel)
 
-    subtitleLabel.textColor = Theme.Color.textInvert.withAlphaComponent(0.66)
-    subtitleLabel.font = Theme.Font.large
     subtitleLabel.numberOfLines = 0
     contentView.addSubview(subtitleLabel)
   }
@@ -124,11 +117,21 @@ final class EventStreamCell: UICollectionViewCell {
     subtitleLabel.text = ""
   }
 
+  private static func attributedTitle(_ title: String?) -> NSAttributedString {
+    let paragraph = NSMutableParagraphStyle()
+    paragraph.lineSpacing = Theme.LineSpacing.base
+
+    return NSAttributedString(string: title ?? "", attributes: [
+      NSAttributedStringKey.font: Theme.Font.largeBold,
+      NSAttributedStringKey.foregroundColor: Theme.Color.background,
+      NSAttributedStringKey.paragraphStyle: paragraph])
+  }
+
   private static func getHeight(forWidth width: CGFloat, title: String) -> CGFloat {
     let titleHeight: CGFloat
 
     if title.characters.count > 0 {
-      titleHeight = title.heightWithConstrainedWidth(width: width, font: EventStreamCell.titleFont)
+      titleHeight = attributedTitle(title).heightWithConstrainedWidth(width: width)
     } else {
       titleHeight = 0
     }
@@ -136,11 +139,21 @@ final class EventStreamCell: UICollectionViewCell {
     return titleHeight
   }
 
+  private static func attributedSubtitle(_ subtitle: String?) -> NSAttributedString {
+    let paragraph = NSMutableParagraphStyle()
+    paragraph.lineSpacing = Theme.LineSpacing.base
+
+    return NSAttributedString(string: subtitle ?? "", attributes: [
+      NSAttributedStringKey.font: Theme.Font.large,
+      NSAttributedStringKey.foregroundColor: Theme.Color.textInvert.withAlphaComponent(0.66),
+      NSAttributedStringKey.paragraphStyle: paragraph])
+  }
+
   private static func getHeight(forWidth width: CGFloat, subtitle: String) -> CGFloat {
     let subtitleHeight: CGFloat
 
     if subtitle.characters.count > 0 {
-      subtitleHeight = subtitle.heightWithConstrainedWidth(width: width, font: EventStreamCell.subtitleFont)
+      subtitleHeight = attributedSubtitle(subtitle).heightWithConstrainedWidth(width: width)
     } else {
       subtitleHeight = 0
     }

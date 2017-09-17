@@ -6,6 +6,9 @@ import IGListKit
 
 final class ArticleDetailController: UIViewController {
 
+  private let aspectRatio: CGFloat = 16/9
+
+  private var imageView: RemoteImageView!
   @IBOutlet private weak var collectionView: UICollectionView!
 
   private (set) var adapter: ListAdapter!
@@ -28,13 +31,29 @@ final class ArticleDetailController: UIViewController {
 
     view.backgroundColor = Theme.Color.background
 
-    collectionView.backgroundColor = Theme.Color.greyLighter
+    collectionView.backgroundColor = .clear
 
     adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
     adapter.collectionView = collectionView
     adapter.dataSource = self
+    adapter.scrollViewDelegate = self
+
+    imageView = RemoteImageView()
+    view.insertSubview(imageView, belowSubview: collectionView)
+
+    updateParallax()
+
+    collectionView.setContentOffset(CGPoint(x: 0, y: -imageView.frame.height), animated: false)
 
     setupBindings()
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+
+    UIView.performWithoutAnimation {
+      self.updateParallax()
+    }
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +72,7 @@ final class ArticleDetailController: UIViewController {
     viewModel.space
       .drive(onNext: { [weak self] space in
         guard let strongSelf = self else { return }
+        strongSelf.imageView.load(imageUrl: space?.header.imageUrl)
         strongSelf.blocks.value = space?.blocks ?? []
       })
       .addDisposableTo(disposeBag)
@@ -62,6 +82,20 @@ final class ArticleDetailController: UIViewController {
         self?.adapter.performUpdates(animated: true, completion: nil)
       })
       .addDisposableTo(disposeBag)
+  }
+
+  private func updateParallax() {
+    imageView.frame = imageViewFrame()
+    collectionView.contentInset = UIEdgeInsets(top: imageView.frame.height, left: 0, bottom: 0, right: 0)
+    collectionView.scrollIndicatorInsets = UIEdgeInsets(top: imageView.frame.height, left: 0, bottom: 0, right: 0)
+  }
+
+  private func imageViewFrame() -> CGRect {
+    let imageHeight = view.frame.width / aspectRatio
+    let offset = round(collectionView.contentOffset.y + collectionView.contentInset.top)
+    let heroOffset = min(max(offset * 0.5, 0), imageHeight)
+
+    return CGRect(x: 0, y: collectionView.frame.minY - heroOffset, width: view.frame.width, height: imageHeight)
   }
 }
 
@@ -75,4 +109,10 @@ extension ArticleDetailController: ListAdapterDataSource {
   }
 
   func emptyView(for listAdapter: ListAdapter) -> UIView? { return nil }
+}
+
+extension ArticleDetailController: UIScrollViewDelegate {
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    imageView.frame = imageViewFrame()
+  }
 }

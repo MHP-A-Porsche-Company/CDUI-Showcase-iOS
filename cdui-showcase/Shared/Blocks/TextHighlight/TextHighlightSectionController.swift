@@ -7,7 +7,8 @@ final class TextHighlightSectionController: ListSectionController {
 
   private static let textCellOptions = TextCell.Options(
     font: Theme.Font.largeBold,
-    textColor: Theme.Color.text,
+    textColor: Theme.Color.blue,
+    lineSpacing: Theme.LineSpacing.wide,
     contentInset: UIEdgeInsets(top: Theme.Margin.base, left: Theme.Margin.large, bottom: Theme.Margin.base, right: Theme.Margin.base)
   )
 
