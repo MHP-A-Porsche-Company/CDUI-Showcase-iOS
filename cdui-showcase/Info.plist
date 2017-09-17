@@ -53,8 +53,10 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLName</key>
-			<string>cdui-showcase</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>cdui-showcase</string>
+			</array>
 		</dict>
 	</array>
 </dict>

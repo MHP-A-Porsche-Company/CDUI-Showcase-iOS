@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="smH-84-53M">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h4B-g5-SKf">
                                     <size key="itemSize" width="50" height="50"/>
@@ -29,30 +29,60 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EaR-Ww-4Ug">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5CH-CX-jkE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgD-aR-yll">
+                                        <rect key="frame" x="20" y="7" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="leftButtonTapped:" destination="Qdo-r0-Iny" eventType="touchUpInside" id="GFh-Sy-QLc"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjB-aJ-kDI">
+                                        <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="fyN-Cw-sPr" customClass="HairlineConstraint" customModule="cdui_showcase" customModuleProvider="target"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="UjB-aJ-kDI" secondAttribute="trailing" id="BBE-yv-JCR"/>
+                                    <constraint firstAttribute="height" constant="44" id="EES-hn-7Kd"/>
+                                    <constraint firstAttribute="bottom" secondItem="UjB-aJ-kDI" secondAttribute="bottom" id="Xna-oD-dgP"/>
+                                    <constraint firstItem="UjB-aJ-kDI" firstAttribute="leading" secondItem="5CH-CX-jkE" secondAttribute="leading" id="lIN-E4-4Xg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z5D-QQ-Pbe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2oV-YP-KiB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="extraLight"/>
-                            </visualEffectView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GUq-gE-yqX" firstAttribute="trailing" secondItem="EaR-Ww-4Ug" secondAttribute="trailing" id="MBS-7M-nm1"/>
-                            <constraint firstAttribute="top" secondItem="EaR-Ww-4Ug" secondAttribute="top" id="NV5-sQ-MD3"/>
-                            <constraint firstItem="GUq-gE-yqX" firstAttribute="top" secondItem="EaR-Ww-4Ug" secondAttribute="bottom" id="P48-aq-J1G"/>
+                            <constraint firstAttribute="trailing" secondItem="Z5D-QQ-Pbe" secondAttribute="trailing" id="36P-Se-Vyk"/>
+                            <constraint firstItem="5CH-CX-jkE" firstAttribute="top" secondItem="GUq-gE-yqX" secondAttribute="top" id="4pq-73-3jD"/>
+                            <constraint firstItem="Z5D-QQ-Pbe" firstAttribute="leading" secondItem="ErF-Rn-AZ7" secondAttribute="leading" id="FTK-O1-InZ"/>
                             <constraint firstItem="smH-84-53M" firstAttribute="leading" secondItem="GUq-gE-yqX" secondAttribute="leading" id="Sv1-dz-l7U"/>
-                            <constraint firstItem="EaR-Ww-4Ug" firstAttribute="leading" secondItem="GUq-gE-yqX" secondAttribute="leading" id="bRM-rr-vze"/>
-                            <constraint firstItem="smH-84-53M" firstAttribute="top" secondItem="GUq-gE-yqX" secondAttribute="top" id="goR-ar-7j3"/>
+                            <constraint firstItem="GUq-gE-yqX" firstAttribute="top" secondItem="Z5D-QQ-Pbe" secondAttribute="bottom" id="Tub-Ad-Ys9"/>
+                            <constraint firstItem="5CH-CX-jkE" firstAttribute="leading" secondItem="GUq-gE-yqX" secondAttribute="leading" id="VdU-oE-Y1d"/>
+                            <constraint firstAttribute="top" secondItem="Z5D-QQ-Pbe" secondAttribute="top" id="Zo9-O1-P8V"/>
+                            <constraint firstItem="GUq-gE-yqX" firstAttribute="trailing" secondItem="5CH-CX-jkE" secondAttribute="trailing" id="jCY-z6-4Um"/>
                             <constraint firstAttribute="bottom" secondItem="smH-84-53M" secondAttribute="bottom" id="qw0-BZ-eUs"/>
+                            <constraint firstItem="smH-84-53M" firstAttribute="top" secondItem="5CH-CX-jkE" secondAttribute="bottom" id="sBb-iO-bpR"/>
                             <constraint firstItem="GUq-gE-yqX" firstAttribute="trailing" secondItem="smH-84-53M" secondAttribute="trailing" id="sOC-pf-aQf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GUq-gE-yqX"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="smH-84-53M" id="pCx-0J-hi6"/>
+                        <outlet property="headerSeparator" destination="UjB-aJ-kDI" id="9IY-gB-dUW"/>
+                        <outlet property="headerView" destination="5CH-CX-jkE" id="bym-2S-vhT"/>
+                        <outlet property="leftHeaderButton" destination="sgD-aR-yll" id="nHm-5b-ilk"/>
+                        <outlet property="statusBarBackdrop" destination="Z5D-QQ-Pbe" id="S3K-nv-men"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPx-95-gg8" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,7 +8,7 @@ struct Services {
   static var router: Router!
 
   static func defaultStreamServiceFactory() -> StreamServiceFactory {
-    return { StreamServiceMock() }
+    return { StreamServiceDefault() }
   }
 
   static func defaultArticleDetailServiceFactory() -> ArticleDetailServiceFactory {

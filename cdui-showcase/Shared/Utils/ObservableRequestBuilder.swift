@@ -12,7 +12,10 @@ struct ObservableRequestBuilder {
       }
 
       let urlRequest = URLRequest(url: convertedUrl)
-      let urlSession = URLSession(configuration: URLSessionConfiguration.default)
+
+      let configuration = URLSessionConfiguration.default
+      configuration.urlCache = nil
+      let urlSession = URLSession(configuration: configuration)
 
       let task = urlSession.dataTask(with: urlRequest, completionHandler: { (data, _, error) in
         if let error = error {

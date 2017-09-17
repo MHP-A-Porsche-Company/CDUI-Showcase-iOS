@@ -31,6 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
 
+    // application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) only triggers if app is running in background
+    // If app is started, the url is included in the launch options
+    if let launchOptions = launchOptions, let url = launchOptions[UIApplicationLaunchOptionsKey.url] as? URL {
+      Services.router.navigate(toUrl: url)
+    }
+
     return true
   }
 

@@ -9,6 +9,12 @@ final class ArticleDetailController: UIViewController {
   private let aspectRatio: CGFloat = 16/9
 
   private var imageView: RemoteImageView!
+
+  @IBOutlet weak var statusBarBackdrop: UIView!
+  @IBOutlet weak var headerView: UIView!
+  @IBOutlet weak var headerSeparator: UIView!
+  @IBOutlet weak var leftHeaderButton: UIButton!
+
   @IBOutlet private weak var collectionView: UICollectionView!
 
   private (set) var adapter: ListAdapter!
@@ -32,6 +38,10 @@ final class ArticleDetailController: UIViewController {
     view.backgroundColor = Theme.Color.background
 
     collectionView.backgroundColor = .clear
+
+    statusBarBackdrop.backgroundColor = Theme.Color.background
+    headerView.backgroundColor = Theme.Color.background
+    headerSeparator.backgroundColor = Theme.Color.separator
 
     adapter = ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 0)
     adapter.collectionView = collectionView
@@ -67,6 +77,11 @@ final class ArticleDetailController: UIViewController {
 
     viewModel.active.value = false
   }
+
+  @IBAction func leftButtonTapped(_ sender: Any) {
+    Services.router.back(from: .navigation)
+  }
+
 
   private func setupBindings() {
     viewModel.space
