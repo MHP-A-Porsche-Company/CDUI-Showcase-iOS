@@ -25,11 +25,12 @@ struct StreamViewModel {
 
       // Listen, this is obviously something you should never do, but if we edit the json serverside the changes show up instantly in the app,
       // which makes for a good demo, which is nice
-      Observable<Int>.interval(2, scheduler: ConcurrentDispatchQueueScheduler(qos: .background)))
+      Observable<Int>.interval(2, scheduler: ConcurrentDispatchQueueScheduler(qos: .userInitiated)))
 
       .flatMapLatest({ (active, _) -> Observable<StreamSpace> in
         return active ? self.streamService.getSpace() : Observable.empty()
       })
+      .observeOn(ConcurrentDispatchQueueScheduler(qos: .userInitiated))
       .subscribe(onNext: { space in
         self.spaceInternal.value = space
       })

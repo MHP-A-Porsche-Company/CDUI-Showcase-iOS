@@ -6,7 +6,7 @@ class ImageCell: UICollectionViewCell {
 
   var imageUrl: String? {
     didSet {
-      imageView.load(imageUrl: imageUrl)
+      imageView.imageUrl = imageUrl
       setNeedsLayout()
     }
   }
@@ -32,10 +32,6 @@ class ImageCell: UICollectionViewCell {
     contentView.backgroundColor = self.backgroundColor
 
     contentView.addSubview(imageView)
-  }
-
-  override func prepareForReuse() {
-    imageView.clear()
   }
 
   override func layoutSubviews() {

@@ -32,6 +32,6 @@ class CarouselItemCell: UICollectionViewCell {
   }
 
   override func prepareForReuse() {
-    imageView.clear()
+    imageView.imageUrl = nil
   }
 }

@@ -118,7 +118,7 @@ extension CarouselBlockCell: UICollectionViewDataSource {
     let item = items[indexPath.row]
 
     cell.textLabel.text = item.text
-    cell.imageView.load(imageUrl: item.imageUrl)
+    cell.imageView.imageUrl = item.imageUrl
 
     return cell
   }

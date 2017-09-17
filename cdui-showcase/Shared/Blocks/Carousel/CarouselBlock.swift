@@ -20,7 +20,7 @@ extension CarouselBlock: Diffable {
 
 extension CarouselBlock: Equatable {
   static func == (lhs: CarouselBlock, rhs: CarouselBlock) -> Bool {
-    guard lhs.id == rhs.id else {
+    guard lhs.id == rhs.id && lhs.title == rhs.title else {
         return false
     }
 

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let streamController = StreamController.create(viewModel: streamViewModel)
 
     let navigationController = UINavigationController(rootViewController: streamController)
-    navigationController.isNavigationBarHidden = true
+    navigationController.navigationBar.isHidden = true // isNavigationBarHidden disables the interactive pop gesture recognizer
 
     router.navigationController = navigationController
     Services.router = router

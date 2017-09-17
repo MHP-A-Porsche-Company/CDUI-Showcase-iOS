@@ -76,18 +76,19 @@ final class ArticleDetailController: UIViewController {
     super.viewDidDisappear(animated)
 
     viewModel.active.value = false
+
+    dch_checkDeallocation()
   }
 
   @IBAction func leftButtonTapped(_ sender: Any) {
     Services.router.back(from: .navigation)
   }
 
-
   private func setupBindings() {
     viewModel.space
       .drive(onNext: { [weak self] space in
         guard let strongSelf = self else { return }
-        strongSelf.imageView.load(imageUrl: space?.header.imageUrl)
+        strongSelf.imageView.imageUrl = space?.header.imageUrl
         strongSelf.blocks.value = space?.blocks ?? []
       })
       .addDisposableTo(disposeBag)

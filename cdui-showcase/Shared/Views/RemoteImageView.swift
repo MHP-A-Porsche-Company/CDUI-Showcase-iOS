@@ -3,6 +3,18 @@ import RxSwift
 
 class RemoteImageView: UIView {
 
+  var imageUrl: String? {
+    willSet {
+      if imageUrl != newValue {
+        if let newUrl = newValue {
+          viewModel = RemoteImageViewModel(imageUrl: newUrl)
+        } else {
+          viewModel = nil
+        }
+      }
+    }
+  }
+
   private var viewModel: RemoteImageViewModel? {
     willSet {
       disposeBag = DisposeBag()
@@ -36,18 +48,6 @@ class RemoteImageView: UIView {
     super.layoutSubviews()
 
     imageView.frame = bounds
-  }
-
-  func load(imageUrl: String?) {
-    if let imageUrl = imageUrl {
-      viewModel = RemoteImageViewModel(imageUrl: imageUrl)
-    } else {
-      viewModel = nil
-    }
-  }
-
-  func clear() {
-    viewModel = nil
   }
 
   private func setup() {

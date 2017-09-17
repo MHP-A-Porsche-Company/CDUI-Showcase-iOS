@@ -21,7 +21,7 @@ final class UserCell: UICollectionViewCell {
 
   var imageUrl: String? {
     didSet {
-      imageView.load(imageUrl: imageUrl)
+      imageView.imageUrl = imageUrl
     }
   }
 
@@ -52,11 +52,5 @@ final class UserCell: UICollectionViewCell {
 
     subtitleLabel.textColor = Theme.Color.text
     subtitleLabel.font = Theme.Font.micro
-  }
-
-  override func prepareForReuse() {
-    titleLabel.text = ""
-    subtitleLabel.text = ""
-    imageView.clear()
   }
 }
