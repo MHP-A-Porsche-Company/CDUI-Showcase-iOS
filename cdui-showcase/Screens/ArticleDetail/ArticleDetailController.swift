@@ -77,7 +77,7 @@ final class ArticleDetailController: UIViewController {
 
     viewModel.active.value = false
 
-    dch_checkDeallocation()
+//    dch_checkDeallocation()
   }
 
   @IBAction func leftButtonTapped(_ sender: Any) {

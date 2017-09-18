@@ -35,12 +35,6 @@
         {
             "id": "103",
             "type": "eventStream",
-            "user": {
-                "id": "0",
-                "name": "Max Mustermann",
-                "position": "Design Technologist",
-                "imageUrl": null
-            },
             "imageUrl": null,
             "title": "Hybrid Data Management mit Informatica",
             "subtitle": "MHP ist beim Workshop „IKT Trends 2020“ mit einem Expertenvortrag vor Ort.",

@@ -48,7 +48,7 @@ final class StreamController: UIViewController {
 
     viewModel.active.value = false
 
-    dch_checkDeallocation()
+//    dch_checkDeallocation()
   }
 
   private func setupBindings() {

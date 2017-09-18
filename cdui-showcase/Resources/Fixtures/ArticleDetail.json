@@ -5,88 +5,89 @@
     "imageUrl": null
   },
   "blocks": [
-    {
-      "id": "101",
-      "type": "header",
-      "title": "Nike Running App Concept",
-      "subtitle": "A slick and smooth idea for a Nike Running App concept."
-    },
-    {
-      "id": "102",
-      "type": "user",
-      "user": {
-        "id": "0",
-        "name": "Max Mustermann",
-        "position": "Design Technologist",
-        "imageUrl": null
-      }
-    },
-    {
-      "id": "103",
-      "type": "text",
-      "text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den s\u00fc\u00dfen Fr\u00fchlingsmorgen, die ich mit ganzem Herzen genie\u00dfe. Ich bin allein und freue mich meines Lebens in dieser Gegend, die f\u00fcr solche Seelen geschaffen ist wie die meine. Ich bin so gl\u00fccklich, mein Bester, so ganz in dem Gef\u00fchle von ruhigem Dasein versunken, da\u00df meine Kunst darunter leidet."
-    },
-    {
-      "id": "104",
-      "type": "textHighlight",
-      "text": "Ich k\u00f6nnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein gr\u00f6\u00dferer Maler gewesen als in diesen Augenblicken."
-    },
-    {
-      "id": "105",
-      "type": "image",
-      "text": "",
-      "imageUrl": null
-    },
-    {
-      "id": "106",
-      "type": "text",
-      "text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den s\u00fc\u00dfen Fr\u00fchlingsmorgen, die ich mit ganzem Herzen genie\u00dfe. Ich bin allein und freue mich meines Lebens in dieser Gegend."
-    },
-    {
-      "id": "1061",
-      "type": "title",
-      "text": "Eine \u00dcberschrift."
-    },
-    {
-      "id": "1062",
-      "type": "text",
-      "text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den s\u00fc\u00dfen Fr\u00fchlingsmorgen, die ich mit ganzem Herzen genie\u00dfe."
-    },
-    {
-      "id": "107",
-      "type": "carousel",
-      "title": "Ein Bilderkarussel",
-      "items": [
-        {
-          "id": "0",
-          "title": "Bild 1",
-          "text": "",
-          "imageUrl": null
-        },
-        {
-          "id": "1",
-          "title": "Bild 2",
-          "text": "",
-          "imageUrl": null
-        },
-        {
-          "id": "2",
-          "title": "Bild 3",
-          "text": "",
-          "imageUrl": null
-        },
-        {
-          "id": "3",
-          "title": "Bild 4",
-          "text": "",
-          "imageUrl": null
-        }
-      ]
-    },
-    {
-      "id": "108",
-      "type": "text",
-      "text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den s\u00fc\u00dfen Fr\u00fchlingsmorgen, die ich mit ganzem Herzen genie\u00dfe. Ich bin allein und freue mich meines Lebens in dieser Gegend, die f\u00fcr solche Seelen geschaffen ist wie die meine. Ich bin so gl\u00fccklich, mein Bester, so ganz in dem Gef\u00fchle von ruhigem Dasein versunken, da\u00df meine Kunst darunter leidet."
-    }
-  ]
+             {
+             "id": "101",
+             "type": "header",
+             "title": "Nike Running App Concept",
+             "subtitle": "A slick and smooth idea for a Nike Running App concept."
+             },
+             {
+             "id": "102",
+             "type": "user",
+             "user": {
+             "id": "0",
+             "name": "Max Mustermann",
+             "position": "Design Technologist",
+             "imageUrl": null
+             }
+             },
+             {
+             "id": "103",
+             "type": "text",
+             "text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet."
+             },
+             {
+             "id": "104",
+             "type": "textHighlight",
+             "text": "Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken."
+             },
+             {
+             "id": "105",
+             "type": "image",
+             "text": "",
+             "imageUrl": null
+             },
+             {
+             "id": "106",
+             "type": "text",
+             "text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend."
+             },
+             {
+             "id": "1061",
+             "type": "title",
+             "text": "Eine Überschrift."
+             },
+             {
+             "id": "1062",
+             "type": "text",
+             "text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße."
+             },
+             {
+             "id": "107",
+             "type": "carousel",
+             "title": "Ein Bilderkarussel",
+             "items": [
+                       {
+                       "id": "0",
+                       "title": "Bild 1",
+                       "text": "",
+                       "imageUrl": null
+                       },
+                       {
+                       "id": "1",
+                       "title": "Bild 2",
+                       "text": "",
+                       "imageUrl": null
+                       },
+                       {
+                       "id": "2",
+                       "title": "Bild 3",
+                       "text": "",
+                       "imageUrl": null
+                       },
+                       {
+                       "id": "3",
+                       "title": "Bild 4",
+                       "text": "",
+                       "imageUrl": null
+                       }
+                       ]
+             },
+             {
+             "id": "108",
+             "type": "text",
+             "text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet."
+             }
+             ]
 }
+
