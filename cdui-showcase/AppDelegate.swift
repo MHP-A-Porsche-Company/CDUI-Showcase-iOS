@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       Services.router.navigate(toUrl: url)
     }
 
+    ImageServiceDefault.cleanCache()
+
     return true
   }
 

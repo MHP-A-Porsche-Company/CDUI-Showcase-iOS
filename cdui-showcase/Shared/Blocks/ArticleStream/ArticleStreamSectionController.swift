@@ -24,7 +24,8 @@ final class ArticleStreamSectionController: ListSectionController {
   )
 
   private static let imageOptions = ImageCell.Options(
-    contentInset: UIEdgeInsets(top: 0, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base)
+    contentInset: UIEdgeInsets(top: 0, left: Theme.Margin.base, bottom: Theme.Margin.base, right: Theme.Margin.base),
+    aspectRatio: 16/9
   )
 
   override init() {

@@ -6,7 +6,8 @@ final class ImageSectionController: ListSectionController {
   private var block: ImageBlock!
 
   private static let imageOptions = ImageCell.Options(
-    contentInset: UIEdgeInsets(top: Theme.Margin.base, left: 0, bottom: Theme.Margin.base, right: 0)
+    contentInset: UIEdgeInsets(top: Theme.Margin.base, left: 0, bottom: Theme.Margin.base, right: 0),
+    aspectRatio: 16/9
   )
 
   override func numberOfItems() -> Int {

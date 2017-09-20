@@ -6,7 +6,8 @@ final class ImageStreamSectionController: ListSectionController {
   private var block: ImageStreamBlock!
 
   private static let imageOptions = ImageCell.Options(
-    contentInset: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    contentInset: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0),
+    aspectRatio: 1
   )
 
   private static let createdOptions = TextCell.Options(

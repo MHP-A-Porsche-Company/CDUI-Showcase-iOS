@@ -17,8 +17,6 @@ class ImageCell: UICollectionViewCell {
     }
   }
 
-  private static let aspectRatio: CGFloat = 16/9
-
   private let imageView = RemoteImageView()
 
   required init?(coder aDecoder: NSCoder) {
@@ -47,7 +45,7 @@ class ImageCell: UICollectionViewCell {
   class func height(forWidth width: CGFloat, options: ImageCell.Options) -> CGFloat {
     let imageWidth = width - options.contentInset.right - options.contentInset.left
 
-    let imageHeight = imageWidth / ImageCell.aspectRatio
+    let imageHeight = imageWidth / options.aspectRatio
 
     return options.contentInset.top + imageHeight + options.contentInset.bottom
   }
@@ -56,9 +54,11 @@ class ImageCell: UICollectionViewCell {
 extension ImageCell {
   struct Options {
     let contentInset: UIEdgeInsets
+    let aspectRatio: CGFloat
   }
 
   static let defaultOptions = ImageCell.Options(
-    contentInset: UIEdgeInsets(top: Theme.Margin.base, left: 0, bottom: Theme.Margin.base, right: 0)
+    contentInset: UIEdgeInsets(top: Theme.Margin.base, left: 0, bottom: Theme.Margin.base, right: 0),
+    aspectRatio: 16/9
   )
 }
