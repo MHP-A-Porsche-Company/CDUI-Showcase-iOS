@@ -1,7 +1,7 @@
 import Foundation
 
 typealias StreamServiceFactory = () -> StreamService
-typealias ArticleDetailServiceFactory = () -> ArticleDetailService
+typealias ArticleDetailServiceFactory = () -> ArticleService
 typealias ImageServiceFactory = () -> ImageService
 
 struct Services {
@@ -12,7 +12,7 @@ struct Services {
   }
 
   static func defaultArticleDetailServiceFactory() -> ArticleDetailServiceFactory {
-    return { ArticleDetailServiceDefault() }
+    return { ArticleServiceDefault() }
   }
 
   static func defaultImageServiceFactory() -> ImageServiceFactory {

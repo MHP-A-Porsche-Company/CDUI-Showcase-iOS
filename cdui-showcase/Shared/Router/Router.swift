@@ -37,7 +37,7 @@ struct RouterDefault: Router {
       return
     }
 
-    guard let viewController = try? factory.build(params: params) else {
+    guard let viewController = try? factory.build(with: params) else {
       return
     }
 

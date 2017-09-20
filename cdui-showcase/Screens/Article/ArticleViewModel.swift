@@ -1,7 +1,7 @@
 import RxSwift
 import RxCocoa
 
-struct ArticleDetailViewModel {
+struct ArticleViewModel {
   let active: Variable<Bool> = Variable(false)
 
   var space: Driver<ArticleDetailSpace?> {
@@ -12,7 +12,7 @@ struct ArticleDetailViewModel {
 
   private let articleId: String
 
-  private let articleDetailService: ArticleDetailService
+  private let articleDetailService: ArticleService
 
   private let disposeBag = DisposeBag()
 

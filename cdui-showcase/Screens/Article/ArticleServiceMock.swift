@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct ArticleDetailServiceMock: ArticleDetailService {
+struct ArticleServiceMock: ArticleService {
   func getSpace(articleId: String) -> Observable<ArticleDetailSpace> {
     if let path = Bundle.main.path(forResource: "ArticleDetail", ofType: "json") {
       do {

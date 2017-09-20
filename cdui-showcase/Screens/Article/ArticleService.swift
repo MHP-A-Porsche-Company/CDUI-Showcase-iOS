@@ -1,6 +1,6 @@
 import RxSwift
 import RxCocoa
 
-protocol ArticleDetailService {
+protocol ArticleService {
   func getSpace(articleId: String) -> Observable<ArticleDetailSpace>
 }

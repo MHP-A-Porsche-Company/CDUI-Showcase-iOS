@@ -4,7 +4,7 @@ import RxSwift
 import RxCocoa
 import IGListKit
 
-final class ArticleDetailController: UIViewController {
+final class ArticleController: UIViewController {
 
   private let aspectRatio: CGFloat = 16/9
 
@@ -19,15 +19,15 @@ final class ArticleDetailController: UIViewController {
 
   private (set) var adapter: ListAdapter!
 
-  private var viewModel: ArticleDetailViewModel!
+  private var viewModel: ArticleViewModel!
 
   private let blocks: Variable<[Block]> = Variable([])
 
   private let disposeBag = DisposeBag()
 
-  class func create(viewModel: ArticleDetailViewModel) -> ArticleDetailController {
-    let storyboard = UIStoryboard(name: "ArticleDetail", bundle: nil)
-    let viewController = storyboard.instantiateInitialViewController() as! ArticleDetailController
+  class func create(viewModel: ArticleViewModel) -> ArticleController {
+    let storyboard = UIStoryboard(name: "Article", bundle: nil)
+    let viewController = storyboard.instantiateInitialViewController() as! ArticleController
     viewController.viewModel = viewModel
     return viewController
   }
@@ -115,7 +115,7 @@ final class ArticleDetailController: UIViewController {
   }
 }
 
-extension ArticleDetailController: ListAdapterDataSource {
+extension ArticleController: ListAdapterDataSource {
   func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
     return blocks.value.map({ $0.listDiffable })
   }
@@ -127,7 +127,7 @@ extension ArticleDetailController: ListAdapterDataSource {
   func emptyView(for listAdapter: ListAdapter) -> UIView? { return nil }
 }
 
-extension ArticleDetailController: UIScrollViewDelegate {
+extension ArticleController: UIScrollViewDelegate {
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     imageView.frame = imageViewFrame()
   }
