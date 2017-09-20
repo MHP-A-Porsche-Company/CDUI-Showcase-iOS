@@ -46,7 +46,7 @@ extension DateFormatter {
   static func smartString(from timeInterval: TimeInterval, unitsStyle: DateComponentsFormatter.UnitsStyle = .abbreviated) -> String? {
     let allowedUnits: NSCalendar.Unit
 
-    if abs(timeInterval) < 60*60 {
+    if abs(timeInterval) < 60 {
       allowedUnits = [.second]
     } else if abs(timeInterval) < 60*60 {
       allowedUnits = [.minute]
