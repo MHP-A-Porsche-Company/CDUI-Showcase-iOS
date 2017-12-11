@@ -10,7 +10,7 @@ class TextCell: UICollectionViewCell {
       setNeedsLayout()
     }
   }
-
+  // Implementation...
   var options = TextCell.Options() {
     didSet {
       textLabel.attributedText = TextCell.attributedText(with: text, options: options)
@@ -58,7 +58,7 @@ class TextCell: UICollectionViewCell {
   }
 
   class func height(forWidth: CGFloat, options: TextCell.Options, text: String?) -> CGFloat {
-    guard let text = text, text.characters.count > 0 else {
+    guard let text = text, text.count > 0 else {
       return 0
 
     }

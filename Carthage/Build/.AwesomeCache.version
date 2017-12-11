@@ -2,7 +2,7 @@
   "commitish" : "5.0",
   "iOS" : [
     {
-      "hash" : "63606e6731e324b223a18f2e41b7f305d74a5367bb108dac62e7611b68cfcd38",
+      "hash" : "7a4216ae3bc29c8a55a8813f23f38bc398a81af72c0b7829718f163726104876",
       "name" : "AwesomeCache"
     }
   ]

@@ -69,7 +69,7 @@ class CarouselBlockCell: UICollectionViewCell {
   override func layoutSubviews() {
     super.layoutSubviews()
 
-    let titleHeight = title != nil && title!.characters.count > 0 ? CarouselBlockCell.titleLabelHeight : 0
+    let titleHeight = title != nil && title!.count > 0 ? CarouselBlockCell.titleLabelHeight : 0
     let titleMargin = titleHeight > 0 ? CarouselBlockCell.titleLabelMargin : 0
 
     let elementWidth = CarouselBlockCell.elementWidth(forWidth: collectionView.frame.width)
@@ -82,7 +82,7 @@ class CarouselBlockCell: UICollectionViewCell {
   }
 
   class func height(forWidth: CGFloat, title: String?, items: [CarouselItem]) -> CGFloat {
-    let titleHeight = title != nil && title!.characters.count > 0 ? titleLabelHeight + titleLabelMargin : 0
+    let titleHeight = title != nil && title!.count > 0 ? titleLabelHeight + titleLabelMargin : 0
 
     let elementWidth = CarouselBlockCell.elementWidth(forWidth: forWidth)
     let elementHeight = CarouselBlockCell.maxElementHeight(forWidth: elementWidth, items: items)

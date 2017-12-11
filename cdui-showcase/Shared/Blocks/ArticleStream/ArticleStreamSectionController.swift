@@ -44,7 +44,7 @@ final class ArticleStreamSectionController: ListSectionController {
     if index == 0 {
       return CGSize(width: width, height: UserCell.preferredHeight)
     } else if index == 1 {
-      let height = (block.imageUrl != nil && block.imageUrl!.characters.count > 0) ? ImageCell.height(forWidth: width, options: ArticleStreamSectionController.imageOptions) : 0
+      let height = (block.imageUrl != nil && block.imageUrl!.count > 0) ? ImageCell.height(forWidth: width, options: ArticleStreamSectionController.imageOptions) : 0
       return CGSize(width: width, height: height)
     } else if index == 2 {
       let height = TextCell.height(forWidth: width, options: ArticleStreamSectionController.titleOptions, text: block.title)

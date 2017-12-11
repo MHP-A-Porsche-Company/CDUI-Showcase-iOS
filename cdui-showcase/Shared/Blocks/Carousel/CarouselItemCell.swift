@@ -26,7 +26,7 @@ class CarouselItemCell: UICollectionViewCell {
 
   class func height(forWidth: CGFloat, text: String?) -> CGFloat {
     let imageHeight = (forWidth / CarouselItemCell.aspectRatio)
-    let textHeight = text != nil && text!.characters.count > 0 ? Theme.Margin.tiny + 48 : 0
+    let textHeight = text != nil && text!.count > 0 ? Theme.Margin.tiny + 48 : 0
 
     return ceil(imageHeight + textHeight)
   }

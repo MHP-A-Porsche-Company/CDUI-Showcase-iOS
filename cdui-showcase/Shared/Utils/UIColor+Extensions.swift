@@ -3,9 +3,9 @@ import UIKit
 
 extension UIColor {
   convenience init(hex: String) {
-    var cString: String = hex.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased().filter { $0 != "#" }
+    let cString: String = hex.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased().filter { $0 != "#" }
 
-    if (cString.characters.count) != 6 {
+    if (cString.count) != 6 {
       self.init(white: 1, alpha: 0)
       return
     }

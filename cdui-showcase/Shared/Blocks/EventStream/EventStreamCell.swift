@@ -130,7 +130,7 @@ final class EventStreamCell: UICollectionViewCell {
   private static func getHeight(forWidth width: CGFloat, title: String) -> CGFloat {
     let titleHeight: CGFloat
 
-    if title.characters.count > 0 {
+    if title.count > 0 {
       titleHeight = attributedTitle(title).heightWithConstrainedWidth(width: width)
     } else {
       titleHeight = 0
@@ -152,7 +152,7 @@ final class EventStreamCell: UICollectionViewCell {
   private static func getHeight(forWidth width: CGFloat, subtitle: String) -> CGFloat {
     let subtitleHeight: CGFloat
 
-    if subtitle.characters.count > 0 {
+    if subtitle.count > 0 {
       subtitleHeight = attributedSubtitle(subtitle).heightWithConstrainedWidth(width: width)
     } else {
       subtitleHeight = 0
